@@ -3,7 +3,7 @@ info:
   version: '1'
   title: 'Test'
 servers:
-  - url: 'localhost:3000'
+  - url: 'https://google.com'
 paths:
   /user:
     get:
