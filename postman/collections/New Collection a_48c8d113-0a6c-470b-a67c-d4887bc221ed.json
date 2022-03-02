@@ -1,0 +1,95 @@
+{
+    "info": {
+        "_postman_id": "3715cf41-9f80-4c67-8bbb-abc96e14c730",
+        "name": "New Collection a",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Google",
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "id": "61deb483-ff4f-4f41-b7e4-401115510930",
+                        "exec": [
+                            ""
+                        ],
+                        "type": "text/javascript"
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "id": "aacb3600-7e0a-489a-af41-fdd074143a8c",
+                        "exec": [
+                            "asdasdasda s dasd asd as das as dasd asd"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ],
+            "id": "8ff7e301-4d80-438a-b610-33bf141c8a34",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://www.postman.com",
+                    "protocol": "https",
+                    "host": [
+                        "www",
+                        "postman",
+                        "com"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Google Copy",
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "id": "43ee79fb-c289-42aa-b789-a1fe608ae0d1",
+                        "exec": [
+                            ""
+                        ],
+                        "type": "text/javascript"
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "id": "1ceb3cd7-a16d-4cc6-890c-cbd1a2fafb97",
+                        "exec": [
+                            ""
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ],
+            "id": "36589a13-bcc9-45a2-bb4a-3804f44c68e4",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://www.postman.com",
+                    "protocol": "https",
+                    "host": [
+                        "www",
+                        "postman",
+                        "com"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
