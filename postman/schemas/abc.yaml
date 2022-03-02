@@ -3,7 +3,7 @@ info:
   version: '1'
   title: 'Test'
 servers:
-  - url: 'https://google.comaaa'
+  - url: 'https://google.comaaa/first/second'
 paths:
   /user:
     get:
