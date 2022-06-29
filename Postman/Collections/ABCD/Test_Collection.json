@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "Create Integration aa",
+			"name": "Create Integration",
 			"event": [
 				{
 					"listen": "test",
