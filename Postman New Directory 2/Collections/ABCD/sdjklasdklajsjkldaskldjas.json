@@ -10,7 +10,7 @@
 			"name": "Integration Actions",
 			"item": [
 				{
-					"name": "List Added Integrations - V2a",
+					"name": "List Added Integrations - V2",
 					"event": [
 						{
 							"listen": "test",
