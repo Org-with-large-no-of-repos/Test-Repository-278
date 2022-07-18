@@ -9750,7 +9750,7 @@
 							"header": null,
 							"cookie": [],
 							"responseTime": null,
-							"body": "{\n    \"error\": {\n        \"name\": \"paramMissingError\",\n        \"message\": \"Parameter is missing in the request.\",\n        \"details\": {\n            \"param\": \"rule\"\n        }\n    }\n}"
+							"body": "{\n    \"error\": {\n        \"name\": \"paramMissingError\",\n        \"message\": \"Parameter is missing in the request.\",\n        \"details\": {\n            \"param\": \"entities\"\n        }\n    }\n}"
 						}
 					]
 				}
