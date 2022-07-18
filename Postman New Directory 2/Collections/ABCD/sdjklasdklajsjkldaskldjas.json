@@ -9638,7 +9638,7 @@
 					"response": [
 						{
 							"id": "90c4c355-50cf-408f-bb79-1de822b01f5d",
-							"name": "Check Integration creation permission on the list of entities",
+							"name": "200 - OK",
 							"originalRequest": {
 								"method": "POST",
 								"header": [
