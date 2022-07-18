@@ -9667,7 +9667,7 @@
 						},
 						{
 							"id": "32c078c7-374b-4f86-8cdc-30fd73ddafa7",
-							"name": "400 - Param Missing",
+							"name": "400 - Param Missing - rule",
 							"originalRequest": {
 								"method": "POST",
 								"header": [
@@ -9679,7 +9679,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"rule\": \"uptime_monitor_notification_slack\",\n    \"entity\": \"entityType\", // Can be one of monitor, uptimeMonitor, collection, team, api, apiversion\n    \"entities\": [\n        {\n            \"id\": \"1ecfaaf4-d7cd-4450-9b0c-42f446d2b6e4\"\n        },\n        {\n            \"id\": \"1ece3018-2e10-4460-82b2-0de3a33c34e0\"\n        },\n        {\n            \"id\": \"1ec9b887-630c-4d10-be6d-9f93a46fe64e\"\n        }\n    ]\n}",
+									"raw": "{\n    \"entity\": \"entityType\", // Can be one of monitor, uptimeMonitor, collection, team, api, apiversion\n    \"entities\": [\n        {\n            \"id\": \"1ecfaaf4-d7cd-4450-9b0c-42f446d2b6e4\"\n        },\n        {\n            \"id\": \"1ece3018-2e10-4460-82b2-0de3a33c34e0\"\n        },\n        {\n            \"id\": \"1ec9b887-630c-4d10-be6d-9f93a46fe64e\"\n        }\n    ]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
