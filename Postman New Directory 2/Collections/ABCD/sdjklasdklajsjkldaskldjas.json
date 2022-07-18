@@ -9618,6 +9618,18 @@
 							"body": "{\n    \"error\": {}\n}"
 						}
 					]
+				},
+				{
+					"name": "New Request",
+					"id": "dda6e413-485f-42ba-aab6-31163c0b40ec",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "28099681-7ca4-479a-8c9a-6e5a3299e48a",
