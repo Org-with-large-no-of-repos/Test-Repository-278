@@ -9692,7 +9692,7 @@
 							"header": null,
 							"cookie": [],
 							"responseTime": null,
-							"body": "[\n    {\n        \"id\": \"1ecfaaf4-d7cd-4450-9b0c-42f446d2b6e4\",\n        \"hasPermission\": true\n    },\n    {\n        \"id\": \"1ece3018-2e10-4460-82b2-0de3a33c34e0\",\n        \"hasPermission\": true\n    },\n    {\n        \"id\": \"1ece3017-163e-4f90-ab23-60fe7fdddc37\",\n        \"hasPermission\": true\n    },\n    {\n        \"id\": \"1ec9b887-630c-4d10-be6d-9f93a46fe64d\",\n        \"hasPermission\": true\n    },\n    {\n        \"id\": \"1ec9b887-630c-4d10-be6d-9f93a46fe64e\",\n        \"hasPermission\": false\n    }\n]"
+							"body": "{\n    \"error\": {\n        \"name\": \"paramMissingError\",\n        \"message\": \"Parameter is missing in the request.\",\n        \"details\": {\n            \"param\": \"rule\"\n        }\n    }\n}"
 						}
 					]
 				}
