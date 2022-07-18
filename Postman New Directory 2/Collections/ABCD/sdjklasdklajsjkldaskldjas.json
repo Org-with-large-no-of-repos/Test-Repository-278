@@ -9609,7 +9609,7 @@
 					]
 				},
 				{
-					"name": "New Request",
+					"name": "Check Integration creation permission on the list of entities",
 					"id": "dda6e413-485f-42ba-aab6-31163c0b40ec",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
