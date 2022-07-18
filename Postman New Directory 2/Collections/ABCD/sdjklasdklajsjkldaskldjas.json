@@ -2334,7 +2334,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "json",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "Date",
@@ -5940,36 +5940,25 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/integration-instances/:integrationId/subscriptions/?entityType&action&entityId",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"integration-instances",
-										":integrationId",
-										"subscriptions",
-										""
-									],
+									"raw": "?entityType=&action=&entityId=",
 									"query": [
 										{
 											"key": "entityType",
-											"value": null
+											"value": ""
 										},
 										{
 											"key": "action",
-											"value": null
+											"value": ""
 										},
 										{
 											"key": "entityId",
-											"value": null
+											"value": ""
 										}
 									],
 									"variable": [
 										{
-											"id": "61249c23-4338-4a28-9caa-abe50c95e291",
-											"key": "integrationId",
 											"value": "{{integrationId}}",
-											"description": "Id of the integration"
+											"key": "integrationId"
 										}
 									]
 								},
@@ -24457,7 +24446,7 @@
 									},
 									"status": "OK",
 									"code": 200,
-									"_postman_previewlanguage": "json",
+									"_postman_previewlanguage": "Text",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -24468,7 +24457,7 @@
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n  \"id\": 73,\n  \"api\": \"f8cac5b1-c6a0-4058-98fc-a7799631ac1e\",\n  \"apiVersion\": \"1d2-c2ec234ec-c123e12d2w-12d\",\n  \"state\": \"active\",\n  \"tokenId\": 1842,\n  \"token_state\"\t: \"active\",\n  \"repository\": {\n    \"id\": 73,\n    \"info\": {\n      \"id\": \"test\",\n      \"name\": \"test\",\n      \"owner\": {\n        \"id\": \"shreys7\",\n        \"name\": \"shreys7\"\n      }\n    },\n    \"links\": {\n        \"repository_url\": \"https://github.com/shreys7/test\",\n        \"branch_url\": \"https://github.com/shreys7/test/tree/develop\"\n    },\n    \"team\": 1,\n    \"customDomain\": null,\n    \"service\": \"github\",\n    \"createdBy\": \"477932\",\n    \"transactionId\": null,\n    \"createdAt\": \"2021-03-17T10:31:10.000Z\",\n    \"updatedAt\": \"2021-03-17T10:31:10.000Z\"\n  },\n  \"userConfig\": {\n    \"branches\": {\n      \"main\": \"master\",\n      \"develop\": \"develop\"\n    },\n    \"entities\": {\n      \"schemas\": {\n        \"entityFileMap\": {\n          \"S1\": \"S1_1MB.txt\"\n        },\n        \"rootDirectory\": \"postman/schemas\"\n      },\n      \"collections\": {\n        \"entityFileMap\": {\n          \"C1\": \"C1_1MB.txt\",\n          \"C2\": \"C2_5MB.txt\"\n        },\n        \"rootDirectory\": \"postman/collections\"\n      }\n    }\n  },\n  \"createdBy\": \"477932\",\n  \"updatedBy\": \"477932\",\n  \"transactionId\": null,\n  \"createdAt\": \"2021-03-17T10:31:10.000Z\",\n  \"updatedAt\": \"2021-03-18T18:36:27.000Z\",\n  \"releaseTags\": [\n    {\n      \"id\": \"1\",\n      \"release\": \"12ed-2x23d2-3d23w\",\n      \"tag\": \"1.0.0\",\n      \"apiVersionRepository\": \"21\",\n      \"createdBy\": \"644823\",\n      \"lastUpdatedBy\": \"644823\",\n      \"createdAt\": \"2021-02-26T17:08:11.000Z\",\n      \"updatedAt\": \"2021-02-26T17:08:11.000Z\"\n    },\n    {\n      \"id\": \"2\",\n      \"release\": \"12ed-2x23d2-3d2d12\",\n      \"tag\": \"2.0.0\",\n      \"apiVersionRepository\": \"21\",\n      \"createdBy\": \"644823\",\n      \"lastUpdatedBy\": \"644823\",\n      \"createdAt\": \"2021-02-26T17:08:11.000Z\",\n      \"updatedAt\": \"2021-02-26T17:08:11.000Z\"\n    },\n    {\n      \"id\": \"3\",\n      \"release\": \"12ed-2x23d2-1332s\",\n      \"tag\": \"3.0.0\",\n      \"apiVersionRepository\": \"21\",\n      \"createdBy\": \"644823\",\n      \"lastUpdatedBy\": \"644823\",\n      \"createdAt\": \"2021-02-26T17:08:11.000Z\",\n      \"updatedAt\": \"2021-02-26T17:08:11.000Z\"\n    }\n  ]\n}"
+									"body": "{\n  \"id\": 73,\n  \"api\": \"f8cac5b1-c6a0-4058-98fc-a7799631ac1e\",\n  \"apiVersion\": \"1d2-c2ec234ec-c123e12d2w-12d\",\n  \"state\": \"active\",\n  \"tokenId\": 1842,\n  \"token_state\"\t: \"active\",\n  \"repository\": {\n    \"id\": 73,\n    \"info\": {\n      \"id\": \"test\",\n      \"name\": \"test\",\n      \"owner\": {\n        \"id\": \"shreys7\",\n        \"name\": \"shreys7\"\n      }\n    },\n    \"links\": {\n        \"repository_url\": \"https://github.com/shreys7/test\",\n        \"branch_url\": \"https://github.com/shreys7/test/tree/develop\"\n    },\n    \"team\": 1,\n    \"customDomain\": null,\n    \"service\": \"github\",\n    \"createdBy\": \"477932\",\n    \"transactionId\": null,\n    \"createdAt\": \"2021-03-17T10:31:10.000Z\",\n    \"updatedAt\": \"2021-03-17T10:31:10.000Z\"\n  },\n  \"userConfig\": {\n    \"branches\": {\n      \"main\": \"master\",\n      \"develop\": \"develop\"\n    },\n    \"entities\": {\n      \"schemas\": {\n        \"entityFileMap\": {\n          \"S1\": \"S1_1MB.txt\"\n        },\n        \"ignoredFiles\": [\"directory1/ignoredFile.js\"],\n        \"rootDirectory\": \"postman/schemas\"\n      },\n      \"collections\": {\n        \"entityFileMap\": {\n          \"C1\": \"C1_1MB.txt\",\n          \"C2\": \"C2_5MB.txt\"\n        },\n        \"rootDirectory\": \"postman/collections\"\n      }\n    }\n  },\n  \"createdBy\": \"477932\",\n  \"updatedBy\": \"477932\",\n  \"transactionId\": null,\n  \"createdAt\": \"2021-03-17T10:31:10.000Z\",\n  \"updatedAt\": \"2021-03-18T18:36:27.000Z\",\n  \"releaseTags\": [\n    {\n      \"id\": \"1\",\n      \"release\": \"12ed-2x23d2-3d23w\",\n      \"tag\": \"1.0.0\",\n      \"apiVersionRepository\": \"21\",\n      \"createdBy\": \"644823\",\n      \"lastUpdatedBy\": \"644823\",\n      \"createdAt\": \"2021-02-26T17:08:11.000Z\",\n      \"updatedAt\": \"2021-02-26T17:08:11.000Z\"\n    },\n    {\n      \"id\": \"2\",\n      \"release\": \"12ed-2x23d2-3d2d12\",\n      \"tag\": \"2.0.0\",\n      \"apiVersionRepository\": \"21\",\n      \"createdBy\": \"644823\",\n      \"lastUpdatedBy\": \"644823\",\n      \"createdAt\": \"2021-02-26T17:08:11.000Z\",\n      \"updatedAt\": \"2021-02-26T17:08:11.000Z\"\n    },\n    {\n      \"id\": \"3\",\n      \"release\": \"12ed-2x23d2-1332s\",\n      \"tag\": \"3.0.0\",\n      \"apiVersionRepository\": \"21\",\n      \"createdBy\": \"644823\",\n      \"lastUpdatedBy\": \"644823\",\n      \"createdAt\": \"2021-02-26T17:08:11.000Z\",\n      \"updatedAt\": \"2021-02-26T17:08:11.000Z\"\n    }\n  ]\n}"
 								},
 								{
 									"id": "43606e5b-9cf4-4def-93e2-195abfb1846a",
@@ -24523,7 +24512,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"tokenId\": 5267\n}",
+									"raw": "{\n  \"branches\": {\n    \"featureBranch\": \"feature/A\"\n  },\n  \"paths\": {\n    \"collection\": \"/collections/paymentsv1/collections\"\n  },\n  \"tokenId\": 123123,\n  \"entityFileMap\": {\n    \"link\": [\n      {\n        \"entityType\": \"collection\",\n        \"entityId\": \"c12-123-123-dq2d-12\",\n        \"entityName\": \"document.json\"\n      },\n      // To link the external schema files\n      // isExternal flag has to be set to true\n      {\n        \"entityType\": \"schema\",\n        \"entityId\": \"1221-adad-1232111\",\n        \"entityName\": \"complete/absolute/path/to/the/file.js\",\n        \"isExternal\": true\n      }\n    ],\n    \"unlink\": [\n      {\n        \"entityType\": \"schema\",\n        \"entityId\": \"s2\"\n      }\n    ],\n    \"ignore\": [\n      {\n        \"entityType\": \"schema\",\n        \"entityName\": \"complete/absolute/path/to/the/ignoredFile.js\"\n      }\n    ]\n  }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -24552,43 +24541,20 @@
 									"id": "c7855a54-2ef5-4ad0-9081-df3d7359c300",
 									"name": "200 OK",
 									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json",
-												"type": "text"
-											}
-										],
+										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"branches\": {\n    \"featureBranch\": \"feature/A\"\n  },\n  \"paths\": {\n    \"collection\": \"/collections/paymentsv1/collections\"\n  },\n  \"tokenId\": 123123,\n  \"entityFileMap\": {\n    \"link\": [\n      {\n        \"entityType\": \"collection\",\n        \"entityId\": \"c12-123-123-dq2d-12\",\n        \"entityName\": \"document.json\"\n      }\n    ],\n    \"unlink\": [\n      {\n        \"entityType\": \"schema\",\n        \"entityId\": \"s2\"\n      }\n    ]\n  }\n}",
+											"raw": "{\n  \"branches\": {\n    \"featureBranch\": \"feature/A\"\n  },\n  \"paths\": {\n    \"collection\": \"/collections/paymentsv1/collections\"\n  },\n  \"tokenId\": 123123,\n  \"entityFileMap\": {\n    \"link\": [\n      {\n        \"entityType\": \"collection\",\n        \"entityId\": \"c12-123-123-dq2d-12\",\n        \"entityName\": \"document.json\"\n      }\n    ],\n    \"unlink\": [\n      {\n        \"entityType\": \"schema\",\n        \"entityId\": \"s2\"\n      }\n    ],\n    \"ignore\": [\n      {\n        \"entityType\": \"schema\",\n        \"entityName\": \"complete/absolute/path/to/the/ignoredFile.js\"\n      }\n    ],\n    // The files sent in this field will be removed from the ignoredFiles array\n    \"track\": [\n      {\n        \"entityType\": \"schema\",\n        \"entityName\": \"complete/absolute/path/to/the/ignoredFileToBeTracked.js\"\n      }\n    ]\n  }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
 												}
 											}
-										},
-										"url": {
-											"raw": "{{baseUrl}}/git/api-repository?apiVersion=1d2-c2ec234ec-c123e12d2w-12d",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"git",
-												"api-repository"
-											],
-											"query": [
-												{
-													"key": "apiVersion",
-													"value": "1d2-c2ec234ec-c123e12d2w-12d"
-												}
-											]
 										}
 									},
 									"status": "OK",
 									"code": 200,
-									"_postman_previewlanguage": "json",
+									"_postman_previewlanguage": "Text",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -24599,7 +24565,7 @@
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n  \"result\": true,\n  \"apiRepository\": {\n    \"api\": \"xsax-123-cssdc-234234asfs\",\n    \"apiVersion\": \"1d2-c2ec234ec-c123e12d2w-12d\",\n    \"id\": \"1\",\n    \"createdBy\": \"12324\",\n    \"updatedBy\": \"21212\",\n    \"state\": \"active\",\n    \"repository\": {\n      \"id\": 73,\n      \"info\": {\n        \"id\": \"test\",\n        \"name\": \"test\",\n        \"owner\": {\n          \"id\": \"shreys7\",\n          \"name\": \"shreys7\"\n        }\n      },\n      \"service\": \"github\",\n      \"createdBy\": \"477932\",\n      \"transactionId\": null,\n      \"createdAt\": \"2021-03-17T10:31:10.000Z\",\n      \"updatedAt\": \"2021-03-17T10:31:10.000Z\",\n      \"tokenId\": 1842\n    },\n    \"userConfig\": {\n      \"branches\": {\n        \"main\": \"master\",\n        \"develop\": \"develop\",\n        \"featureBranch\": \"feature/A\"\n      },\n      \"entities\": {\n        \"collection\": {\n          \"rootDirectory\": \"/collections/paymentsv1/collections\",\n          \"entityFileMap\": {\n            \"1edwq-12dqwd-12e12el\": \"payments_documentation.json\",\n            \"1ed12-12dqwx-12d12d1\": \"payments_monitor.json\",\n            \"c12-123-123-dq2d-12\": \"document.json\"\n          }\n        },\n        \"schema\": {\n          \"rootDirectory\": \"/postman/schemas\",\n          \"entityFileMap\": {\n            \"1edwq-12dqwd-12e12el\": \"payments_schema.yml\"\n          }\n        },\n        \"stub\": {\n          \"rootDirectory\": \"/postman/stubs\",\n          \"entityFileMap\": {\n            \"api-1edwq-12dqwd-12e12e-stub\": \"payments_stub.js\"\n          }\n        }\n      }\n    },\n    \"transactionId\": null,\n    \"createdAt\": \"2021-02-26T17:08:11.000Z\",\n    \"updatedAt\": \"2021-02-26T17:08:11.000Z\",\n    \"releaseTags\": []\n  }\n}"
+									"body": "{\n  \"result\": true,\n  \"apiRepository\": {\n    \"api\": \"xsax-123-cssdc-234234asfs\",\n    \"apiVersion\": \"1d2-c2ec234ec-c123e12d2w-12d\",\n    \"id\": \"1\",\n    \"createdBy\": \"12324\",\n    \"updatedBy\": \"21212\",\n    \"state\": \"active\",\n    \"repository\": {\n      \"id\": 73,\n      \"info\": {\n        \"id\": \"test\",\n        \"name\": \"test\",\n        \"owner\": {\n          \"id\": \"shreys7\",\n          \"name\": \"shreys7\"\n        }\n      },\n      \"service\": \"github\",\n      \"createdBy\": \"477932\",\n      \"transactionId\": null,\n      \"createdAt\": \"2021-03-17T10:31:10.000Z\",\n      \"updatedAt\": \"2021-03-17T10:31:10.000Z\",\n      \"tokenId\": 1842\n    },\n    \"userConfig\": {\n      \"branches\": {\n        \"main\": \"master\",\n        \"develop\": \"develop\",\n        \"featureBranch\": \"feature/A\"\n      },\n      \"entities\": {\n        \"collection\": {\n          \"rootDirectory\": \"/collections/paymentsv1/collections\",\n          \"entityFileMap\": {\n            \"1edwq-12dqwd-12e12el\": \"payments_documentation.json\",\n            \"1ed12-12dqwx-12d12d1\": \"payments_monitor.json\",\n            \"c12-123-123-dq2d-12\": \"document.json\"\n          }\n        },\n        \"schema\": {\n          \"rootDirectory\": \"/postman/schemas\",\n          \"entityFileMap\": {\n            \"1edwq-12dqwd-12e12el\": \"payments_schema.yml\",\n            \"1221-adad-1232111\": \"../.../complete/absolute/path/to/the/file.js\"\n          },\n          // This field will only start appearing after the first ignore\n          // For older integrations this field will not be sent in the response\n          \"ignoredFiles\": [\"complete/absolute/path/to/the/file.js\"]\n        },\n        \"stub\": {\n          \"rootDirectory\": \"/postman/stubs\",\n          \"entityFileMap\": {\n            \"api-1edwq-12dqwd-12e12e-stub\": \"payments_stub.js\"\n          }\n        }\n      }\n    },\n    \"transactionId\": null,\n    \"createdAt\": \"2021-02-26T17:08:11.000Z\",\n    \"updatedAt\": \"2021-02-26T17:08:11.000Z\",\n    \"releaseTags\": []\n  }\n}"
 								},
 								{
 									"id": "437ff11e-6907-4c32-9ddc-d64ae0e42f76",
@@ -26704,7 +26670,7 @@
 											},
 											"status": "OK",
 											"code": 200,
-											"_postman_previewlanguage": "json",
+											"_postman_previewlanguage": "Text",
 											"header": [
 												{
 													"key": "Content-Type",
@@ -26715,7 +26681,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"entities\": {\n      \"collections\": {\n          \"entityFileMap\": {\n              \"1edwq-12dqwd-12e12el\": \"payments_documentation.json\",\n              \"1ed12-12dqwx-12d12d1\": \"payments_monitor.json\"\n          },\n          \"rootDirectory\": \"postman/collections\",\n          \"files\": [\n            {\n              \"name\": \"paymets_documentation.json\",\n              \"path\": \"postman/collections/paymets_documentation.json\",\n              \"status\": \"modified\",\n              \"additions\": \"1\",\n              \"deletions\": \"1\",\n              \"changes\": \"2\",\n              \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/collections/payments_documentation.json\"\n            },\n            {\n              \"name\": \"payments_monitor.json\",\n              \"path\": \"postman/collections/payments_monitor.json\",\n              \"status\": \"removed\",\n              \"additions\": \"1\",\n              \"deletions\": \"1\",\n              \"changes\": \"2\",\n              \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/collections/payments_monitor.json\"\n            }\n          ]\n      },\n      \"schemas\": {\n          \"entityFileMap\": {\n              \"1edwq-12dqwd-12e12el\": \"payments_schema.yml\"\n          },\n          \"rootDirectory\": \"postman/schemas\",\n          \"files\": [\n            {\n              \"name\": \"payments_stub.js\",\n              \"path\": \"postman/stubs/payments_stub.js\",\n              \"status\": \"added\",\n              \"additions\": \"1\",\n              \"deletions\": \"1\",\n              \"changes\": \"2\",\n              \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/stubs/payments_stub.js\"\n            },\n\n            {\n              \"name\": \"payments_schema.yml\",\n              \"path\": \"postman/schemas/payments_schema.yml\",\n              \"status\": \"modified\",\n              \"additions\": \"1\",\n              \"deletions\": \"1\",\n              \"changes\": \"2\",\n              \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/schemas/payments_schema.yml\"\n            }\n          ]\n      },\n      \"stubs\": {\n          \"entityFileMap\": {\n              \"api-1edwq-12dqwd-12e12e-stub\": \"payments_stub.js\"\n          },\n          \"rootDirectory\": \"postman/stubs\"\n      }\n  },\n  \"remote_head\": {\n      \"sha\": \"cd435nf\",\n      \"message\": \"Update via api\",\n      \"date\": \"2012-05-28T04:42:42-07:00\",\n      \"author_name\": \"Shrey Shah\",\n      // author_username may or may not appear in the response\n      \"author_username\": \"Shrey Shah\",\n      \"committer_name\": \"Shrey Shah\",\n      // committer_username may or may not appear in the response\n      \"committer_username\": \"shreys7\",\n      \"parents\": [\n          \"aasd678\"\n      ],\n      \"link\": \"https://bitbucket.org/postmanlabs/postman-sync-server/commits/3f86f5de75d96401e75363e55d7867ee4950e443\",\n      \"stats\": {\n        \"total\": 1,\n        \"additions\": 1,\n        \"deletions\": 0\n    }\n  },\n  \"commits\": [\n      {\n          \"sha\": \"cd435nf\",\n          \"message\": \"Update via api\",\n          \"date\": \"2012-05-28T04:42:42-07:00\",\n          \"author_name\": \"Shrey Shah\",\n          \"author_username\": \"Shrey Shah\",\n          \"committer_name\": \"Shrey Shah\",\n          \"committer_username\": \"shreys7\",\n          \"parents\": [\n              \"aasd678\"\n          ],\n          \"link\": \"https://bitbucket.org/postmanlabs/postman-sync-server/commits/3f86f5de75d96401e75363e55d7867ee4950e443\",\n          \"stats\": {\n            \"total\": 3,\n            \"additions\": 2,\n            \"deletions\": 1\n         },\n          \"files\": [\n              {\n                  \"name\": \"payments_stub.js\",\n                  \"path\": \"postman/stubs/payments_stub.js\",\n                  \"status\": \"added\",\n                  \"additions\": \"1\",\n                  \"deletions\": \"1\",\n                  \"changes\": \"2\",\n                  \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/stubs/payments_stub.js\"\n              },\n              {\n                  \"name\": \"paymets_documentation.json\",\n                  \"full_name\": \"postman/collections/paymets_documentation.json\",\n                  \"status\": \"modified\",\n                  \"additions\": \"1\",\n                  \"deletions\": \"1\",\n                  \"changes\": \"2\",\n                  \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/collections/payments_documentation.json\"\n              },\n              {\n                  \"name\": \"payments_monitor.json\",\n                  \"full_name\": \"postman/collections/payments_monitor.json\",\n                  \"status\": \"removed\",\n                  \"additions\": \"1\",\n                  \"deletions\": \"1\",\n                  \"changes\": \"2\",\n                  \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/collections/payments_monitor.json\"\n              }\n          ]\n      },\n      {\n          \"sha\": \"aasd678\",\n          \"message\": \"Update payments schema\",\n          \"date\": \"2012-05-27T04:42:42-07:00\",\n          \"author_name\": \"Shrey Shah\",\n          \"author_username\": \"Shrey Shah\",\n          \"committer_name\": \"Shrey Shah\",\n          \"committer_username\": \"shreys7\",\n          \"parents\": [\n              \"c5b97d5\"\n          ],\n          \"link\": \"https://bitbucket.org/postmanlabs/postman-sync-server/commits/3f86f5de75d96401e75363e55d7867ee4950e443\",\n          \"stats\": {\n            \"total\": 1,\n            \"additions\": 1,\n            \"deletions\": 0\n          },\n          \"files\": [\n              {\n                  \"name\": \"payments_schema.yml\",\n                  \"full_name\": \"postman/schemas/payments_schema.yml\",\n                  \"status\": \"modified\",\n                  \"additions\": \"1\",\n                  \"deletions\": \"1\",\n                  \"changes\": \"2\",\n                  \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/schemas/payments_schema.yml\"\n              }\n          ]\n      }\n  ]\n}"
+											"body": "{\n    \"entities\": {\n      \"collections\": {\n          \"entityFileMap\": {\n              \"1edwq-12dqwd-12e12el\": \"payments_documentation.json\",\n              \"1ed12-12dqwx-12d12d1\": \"payments_monitor.json\"\n          },\n          \"rootDirectory\": \"postman/collections\",\n          \"files\": [\n            {\n              \"name\": \"paymets_documentation.json\",\n              \"path\": \"postman/collections/paymets_documentation.json\",\n              \"status\": \"modified\",\n              \"additions\": \"1\",\n              \"deletions\": \"1\",\n              \"changes\": \"2\",\n              \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/collections/payments_documentation.json\"\n            },\n            {\n              \"name\": \"payments_monitor.json\",\n              \"path\": \"postman/collections/payments_monitor.json\",\n              \"status\": \"removed\",\n              \"additions\": \"1\",\n              \"deletions\": \"1\",\n              \"changes\": \"2\",\n              \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/collections/payments_monitor.json\"\n            }\n          ]\n      },\n      \"schemas\": {\n          \"entityFileMap\": {\n              \"1edwq-12dqwd-12e12el\": \"payments_schema.yml\",\n              // absolute path shows us that the entity being track is an external entity\n              // ie it does not reside in the user configured parent directory\n              \"edff130f-8562-42ce-a8ca-a29078ca5604\": \"../../externalDirectory/external_schema_file.yml\"\n          },\n          // This field will only start appearing after the first ignore\n          // For older integrations this field will not be sent in the response\n          \"ignoredFiles\": [\"complete/absolute/path/to/the/file.js\"],\n          \"rootDirectory\": \"postman/schemas\",\n          \"files\": [\n            {\n              \"name\": \"payments_stub.js\",\n              \"path\": \"postman/stubs/payments_stub.js\",\n              \"status\": \"added\",\n              \"additions\": \"1\",\n              \"deletions\": \"1\",\n              \"changes\": \"2\",\n              \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/stubs/payments_stub.js\"\n            },\n\n            {\n              \"name\": \"payments_schema.yml\",\n              \"path\": \"postman/schemas/payments_schema.yml\",\n              \"status\": \"modified\",\n              \"additions\": \"1\",\n              \"deletions\": \"1\",\n              \"changes\": \"2\",\n              \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/schemas/payments_schema.yml\"\n            },\n            {\n              \"name\": \"external_schema_file.yml\",\n              \"path\": \"externalDirectory/external_schema_file.yml\",\n              \"additions\": \"1\",\n              \"deletions\": \"1\",\n              \"changes\": \"2\",\n              \"download_url\":\"https://raw.githubusercontent.com/user-repo/postman/schemas/payments_schema.yml\"\n            }\n          ]\n      },\n      \"stubs\": {\n          \"entityFileMap\": {\n              \"api-1edwq-12dqwd-12e12e-stub\": \"payments_stub.js\"\n          },\n          \"rootDirectory\": \"postman/stubs\"\n      }\n  },\n  \"remote_head\": {\n      \"sha\": \"cd435nf\",\n      \"message\": \"Update via api\",\n      \"date\": \"2012-05-28T04:42:42-07:00\",\n      \"author_name\": \"Shrey Shah\",\n      // author_username may or may not appear in the response\n      \"author_username\": \"Shrey Shah\",\n      \"committer_name\": \"Shrey Shah\",\n      // committer_username may or may not appear in the response\n      \"committer_username\": \"shreys7\",\n      \"parents\": [\n          \"aasd678\"\n      ],\n      \"link\": \"https://bitbucket.org/postmanlabs/postman-sync-server/commits/3f86f5de75d96401e75363e55d7867ee4950e443\",\n      \"stats\": {\n        \"total\": 1,\n        \"additions\": 1,\n        \"deletions\": 0\n    }\n  },\n  \"commits\": [\n      {\n          \"sha\": \"cd435nf\",\n          \"message\": \"Update via api\",\n          \"date\": \"2012-05-28T04:42:42-07:00\",\n          \"author_name\": \"Shrey Shah\",\n          \"author_username\": \"Shrey Shah\",\n          \"committer_name\": \"Shrey Shah\",\n          \"committer_username\": \"shreys7\",\n          \"parents\": [\n              \"aasd678\"\n          ],\n          \"link\": \"https://bitbucket.org/postmanlabs/postman-sync-server/commits/3f86f5de75d96401e75363e55d7867ee4950e443\",\n          \"stats\": {\n            \"total\": 3,\n            \"additions\": 2,\n            \"deletions\": 1\n         },\n          \"files\": [\n              {\n                  \"name\": \"payments_stub.js\",\n                  \"path\": \"postman/stubs/payments_stub.js\",\n                  \"status\": \"added\",\n                  \"additions\": \"1\",\n                  \"deletions\": \"1\",\n                  \"changes\": \"2\",\n                  \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/stubs/payments_stub.js\"\n              },\n              {\n                  \"name\": \"paymets_documentation.json\",\n                  \"full_name\": \"postman/collections/paymets_documentation.json\",\n                  \"status\": \"modified\",\n                  \"additions\": \"1\",\n                  \"deletions\": \"1\",\n                  \"changes\": \"2\",\n                  \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/collections/payments_documentation.json\"\n              },\n              {\n                  \"name\": \"payments_monitor.json\",\n                  \"full_name\": \"postman/collections/payments_monitor.json\",\n                  \"status\": \"removed\",\n                  \"additions\": \"1\",\n                  \"deletions\": \"1\",\n                  \"changes\": \"2\",\n                  \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/collections/payments_monitor.json\"\n              }\n          ]\n      },\n      {\n          \"sha\": \"aasd678\",\n          \"message\": \"Update payments schema\",\n          \"date\": \"2012-05-27T04:42:42-07:00\",\n          \"author_name\": \"Shrey Shah\",\n          \"author_username\": \"Shrey Shah\",\n          \"committer_name\": \"Shrey Shah\",\n          \"committer_username\": \"shreys7\",\n          \"parents\": [\n              \"c5b97d5\"\n          ],\n          \"link\": \"https://bitbucket.org/postmanlabs/postman-sync-server/commits/3f86f5de75d96401e75363e55d7867ee4950e443\",\n          \"stats\": {\n            \"total\": 1,\n            \"additions\": 1,\n            \"deletions\": 0\n          },\n          \"files\": [\n              {\n                  \"name\": \"payments_schema.yml\",\n                  \"full_name\": \"postman/schemas/payments_schema.yml\",\n                  \"status\": \"modified\",\n                  \"additions\": \"1\",\n                  \"deletions\": \"1\",\n                  \"changes\": \"2\",\n                  \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/schemas/payments_schema.yml\"\n              }\n          ]\n      }\n  ]\n}"
 										},
 										{
 											"id": "0ad34ada-e567-4320-a2c6-be7af14ba10b",
@@ -27111,7 +27077,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/git/api-repository/changes?apiVersion={{apiVersion_id}}&branch={{branch}}",
+											"raw": "{{baseUrl}}/git/api-repository/changes?apiVersion={{apiVersion_id}}&branch={{branch}}&recursive=schemas",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -27129,6 +27095,10 @@
 													"key": "branch",
 													"value": "{{branch}}",
 													"description": "the branch to pull the changes from, which is tracked in userConfig"
+												},
+												{
+													"key": "recursive",
+													"value": "schemas"
 												}
 											]
 										}
@@ -27136,18 +27106,56 @@
 									"response": [
 										{
 											"id": "fbb801f9-84bd-4db9-afc3-e7c16fbaa770",
-											"name": "200",
+											"name": "200 - Recursive Flag missing",
+											"originalRequest": {
+												"header": [],
+												"url": {
+													"raw": "?apiVersion=1d2-c2ec234ec-c123e12d2w-12d&branch=main",
+													"query": [
+														{
+															"key": "apiVersion",
+															"value": "1d2-c2ec234ec-c123e12d2w-12d"
+														},
+														{
+															"key": "branch",
+															"value": "main"
+														},
+														{
+															"key": "",
+															"value": "",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "Text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"commit\": {\n    \"sha\": \"2c8d64313a828f0f4ba1d917691692f64e551d5c\",\n    \"message\": \"Commit via the commit function for Bitbucket LOCALHOST\",\n    \"date\": \"2021-03-23T08:19:25+00:00\",\n    \"author_name\": \"Shubham Joshi\",\n    // author_username may or may not appear in the response\n    \"author_username\": \"Shubham Joshi <shubham.joshi@postman.com>\",\n    \"committer_name\": \"Shubham Joshi\",\n    // committer_username may or may not appear in the response\n    \"committer_username\": \"Shubham Joshi <shubham.joshi@postman.com>\",\n    \"parents\": [\n        \"6d5bef77198ce695fdb2852ab783f0c67fcc4f59\"\n    ],\n    \"link\": \"https://bitbucket.org/postmanlabs/postman-sync-server/commits/3f86f5de75d96401e75363e55d7867ee4950e443\"\n  },  \n  \"collections\": {\n    \"entityFileMap\": {\n      \"b55f0c67-8129-45e6-8bb1-970b2571c749testsuite\": \"payments_documentation.json\",\n      \"b55f0c67-8129-45e6-8bb1-970b2571c749\": \"payments.json\",\n      \"604742ef-f516-407b-bcf4-813d4b4fc5dadocumentation\": \"payments_monitor.json\"\n    },\n    \"files\": [\n      {\n        \"name\": \"payments_documentation.json\",\n        \"path\": \"postman/collections/payments_documentation.json\"\n      },\n      {\n        \"name\": \"payments_monitor.json\",\n        \"path\": \"postman/collections/payments_monitor.json\"\n      },\n      {\n        \"name\": \"payments_tests.json\",\n        \"path\": \"postman/collections/payments_tests.json\"\n      }\n    ]\n  },\n  \"schemas\": {\n    \"entityFileMap\": {\n      \"edff130f-8562-42ce-a8ca-a29078ca5603\": \"payments_schema.yml\",\n      // absolute path shows us that the entity being track is an external entity\n      // ie it does not reside in the user configured parent directory\n      \"edff130f-8562-42ce-a8ca-a29078ca5604\": \"../../externalDirectory/external_schema_file.yml\"\n    },\n    // This field will only start appearing after the first ignore\n    // For older integrations this field will not be sent in the response\n    \"ignoredFiles\": [\"complete/absolute/path/to/the/file.js\"],\n    \"files\": [\n      {\n        \"name\": \"payments_schema.yml\",\n        \"path\": \"postman/schemas/payments_schema.yml\"\n      }\n    ]\n  },\n  \"stubs\": {\n    \"entityFileMap\": {\n      \"api-1edwq-12dqwd-12e12e-stub\": \"payments_stub.js\"\n    },\n    \"files\": [\n      {\n        \"name\": \"payments_code.js\",\n        \"path\": \"postman/stubs/payments_stub.js\"\n      }\n    ]\n  }\n}"
+										},
+										{
+											"id": "46bbef32-946d-4601-8ad0-aec62f7c74f8",
+											"name": "200 - Recursive Per Entity",
 											"originalRequest": {
 												"method": "GET",
 												"header": [
 													{
 														"key": "Content-Type",
-														"value": "application/json",
-														"type": "text"
+														"value": "application/json"
 													}
 												],
 												"url": {
-													"raw": "{{baseUrl}}/git/api-repository/changes?apiVersion=1d2-c2ec234ec-c123e12d2w-12d&branch=main",
+													"raw": "{{baseUrl}}/git/api-repository/changes?apiVersion=1d2-c2ec234ec-c123e12d2w-12d&branch=main&recursive=schema,collection",
 													"host": [
 														"{{baseUrl}}"
 													],
@@ -27164,6 +27172,10 @@
 														{
 															"key": "branch",
 															"value": "main"
+														},
+														{
+															"key": "recursive",
+															"value": "schema,collection"
 														}
 													]
 												}
@@ -27175,13 +27187,12 @@
 												{
 													"key": "Content-Type",
 													"value": "application/json",
-													"description": "",
-													"type": "text"
+													"description": ""
 												}
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n  \"commit\": {\n    \"sha\": \"2c8d64313a828f0f4ba1d917691692f64e551d5c\",\n    \"message\": \"Commit via the commit function for Bitbucket LOCALHOST\",\n    \"date\": \"2021-03-23T08:19:25+00:00\",\n    \"author_name\": \"Shubham Joshi\",\n    // author_username may or may not appear in the response\n    \"author_username\": \"Shubham Joshi <shubham.joshi@postman.com>\",\n    \"committer_name\": \"Shubham Joshi\",\n    // committer_username may or may not appear in the response\n    \"committer_username\": \"Shubham Joshi <shubham.joshi@postman.com>\",\n    \"parents\": [\n        \"6d5bef77198ce695fdb2852ab783f0c67fcc4f59\"\n    ],\n    \"link\": \"https://bitbucket.org/postmanlabs/postman-sync-server/commits/3f86f5de75d96401e75363e55d7867ee4950e443\"\n  },  \n  \"collections\": {\n    \"entityFileMap\": {\n      \"b55f0c67-8129-45e6-8bb1-970b2571c749testsuite\": \"payments_documentation.json\",\n      \"b55f0c67-8129-45e6-8bb1-970b2571c749\": \"payments.json\",\n      \"604742ef-f516-407b-bcf4-813d4b4fc5dadocumentation\": \"payments_monitor.json\"\n    },\n    \"files\": [\n      {\n        \"name\": \"payments_documentation.json\",\n        \"path\": \"postman/collections/payments_documentation.json\"\n      },\n      {\n        \"name\": \"payments_monitor.json\",\n        \"path\": \"postman/collections/payments_monitor.json\"\n      },\n      {\n        \"name\": \"payments_tests.json\",\n        \"path\": \"postman/collections/payments_tests.json\"\n      }\n    ]\n  },\n  \"schemas\": {\n    \"entityFileMap\": {\n      \"edff130f-8562-42ce-a8ca-a29078ca5603\": \"payments_schema.yml\"\n    },\n    \"files\": [\n      {\n        \"name\": \"payments_schema.yml\",\n        \"path\": \"postman/schemas/payments_schema.yml\"\n      }\n    ]\n  },\n  \"stubs\": {\n    \"entityFileMap\": {\n      \"api-1edwq-12dqwd-12e12e-stub\": \"payments_stub.js\"\n    },\n    \"files\": [\n      {\n        \"name\": \"payments_code.js\",\n        \"path\": \"postman/stubs/payments_stub.js\"\n      }\n    ]\n  }\n}"
+											"body": "{\n\"commit\": {\n    \"sha\": \"2c8d64313a828f0f4ba1d917691692f64e551d5c\",\n    \"message\": \"Commit via the commit function for Bitbucket LOCALHOST\",\n    \"date\": \"2021-03-23T08:19:25+00:00\",\n    \"author_name\": \"Shubham Joshi\",\n    // author_username may or may not appear in the response\n    \"author_username\": \"Shubham Joshi <shubham.joshi@postman.com>\",\n    \"committer_name\": \"Shubham Joshi\",\n    // committer_username may or may not appear in the response\n    \"committer_username\": \"Shubham Joshi <shubham.joshi@postman.com>\",\n    \"parents\": [\n        \"6d5bef77198ce695fdb2852ab783f0c67fcc4f59\"\n    ],\n    \"link\": \"https://bitbucket.org/postmanlabs/postman-sync-server/commits/3f86f5de75d96401e75363e55d7867ee4950e443\"\n  },  \n  \"collections\": {\n    \"entityFileMap\": {\n      \"b55f0c67-8129-45e6-8bb1-970b2571c749testsuite\": \"payments_documentation.json\",\n      \"b55f0c67-8129-45e6-8bb1-970b2571c749\": \"payments.json\",\n      \"604742ef-f516-407b-bcf4-813d4b4fc5dadocumentation\": \"payments_monitor.json\"\n    },\n    \"files\": [\n      {\n        \"name\": \"payments_documentation.json\",\n        \"path\": \"postman/collections/payments_documentation.json\",\n        \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/collections/payments_documentation.json\"\n      },\n      {\n        \"name\": \"payments_monitor.json\",\n        \"path\": \"postman/collections/payments_monitor.json\",\n        \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/collections/payments_monitor.json\"\n      },\n      {\n        \"name\": \"payments_tests.json\",\n        \"path\": \"postman/collections/payments_tests.json\",\n        \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/collections/payments_tests.json\"\n      }\n    ]\n  },\n  \"schemas\": {\n    \"entityFileMap\": {\n      \"edff130f-8562-42ce-a8ca-a29078ca5603\": \"payments_schema.yml\",\n      \"edff130f-8562-42ce-a8ca-a29078ca5607\": \"new-schema.yml\",\n      // This is a file that resides in nested folders in parent directory\n      \"edff130f-8562-42ce-a8ca-a29078ca5605\": \"directory/old-schema.yml\",\n      // absolute path shows us that the entity being track is an external entity\n      // ie it does not reside in the user configured parent directory\n      \"edff130f-8562-42ce-a8ca-a29078ca5604\": \"../../externalDirectory/external_schema_file.yml\"\n    },\n    // This field will only start appearing after the first ignore\n    // For older integrations this field will not be sent in the response\n    \"ignoredFiles\": [\"complete/absolute/path/to/the/file.js\"],\n    \"files\": [\n      {\n        \"name\": \"payments_schema.yml\",\n        \"path\": \"postman/schemas/payments_schema.yml\",\n        \"download_url\":\"https://raw.githubusercontent.com/user-repo/postman/schemas/payments_schema.yml\"\n      },\n      {\n        \"name\": \"new-schema.yml\",\n        \"path\": \"postman/schemas/sub-directory/new-schema.yml\",\n        \"download_url\":\"https://raw.githubusercontent.com/user-repo/postman/schemas/new-schema.yml\"\n      },\n      {\n        \"name\": \"old-schema.yml\",\n        \"path\": \"postman/schemas/sub-directory/another-one/old-schema.yml\",\n        \"download_url\":\"https://raw.githubusercontent.com/user-repo/postman/schemas/old-schema.yml\"\n      },\n      {\n        \"name\": \"external_schema_file.yml\",\n        \"path\": \"externalDirectory/external_schema_file.yml\",\n        \"download_url\":\"https://raw.githubusercontent.com/user-repo/postman/schemas/payments_schema.yml\"\n      }\n    ]\n  },\n  \"stubs\": {\n    \"entityFileMap\": {\n      \"api-1edwq-12dqwd-12e12e-stub\": \"payments_stub.js\"\n    },\n    \"files\": [\n      {\n        \"name\": \"payments_code.js\",\n        \"path\": \"postman/stubs/payments_stub.js\",\n        \"download_url\": \"https://raw.githubusercontent.com/user-repo/postman/stubs/payments_stub.js\"\n      }\n    ]\n  }\n}"
 										},
 										{
 											"id": "9cb63957-daf3-4285-ba84-3f11c5286115",
@@ -27619,7 +27630,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"commitMessage\": \"Commit v1 payments API\",\n  \"lastCommit\": \"ch3ds2\",\n  \"actions\": {\n    \"create\": [\n      {\n        \"entityType\": \"collection\",\n        \"entityId\": \"123d-cwec-32rf23d-23\",\n        \"entityName\": \"payments_documentation.json\",\n        \"file\": {\n          \"type\": \"link\",\n          \"contents\": \"dew12.s3.com/c1.json\"\n        }\n      }\n      // ... more files to be created\n    ],\n    \"update\": [\n      {\n        \"entityType\": \"schema\",\n        \"entityId\": \"12e23d-d23d12-1d21\",\n        \"file\": {\n          \"type\": \"raw\",\n          \"contents\": \"{\\\"openapi\\\": \\\"3.0.0\\\"}\"\n        }\n      }\n      // ... more files to be updated\n    ],\n    \"delete\": [\n      {\n        \"entityType\": \"stub\",\n        \"entityId\": \"api-12s-cew-23r1-stub\"\n      }\n      // ... more files to be deleted\n    ] \n  }\n}",
+													"raw": "{\n  \"commitMessage\": \"Commit v1 payments API\",\n  \"lastCommit\": \"ch3ds2\",\n  \"actions\": {\n    \"create\": [\n      {\n        \"entityType\": \"collection\",\n        \"entityId\": \"123d-cwec-32rf23d-23\",\n        \"entityName\": \"payments_documentation.json\",\n        \"file\": {\n          \"type\": \"link\",\n          \"contents\": \"dew12.s3.com/c1.json\"\n        }\n      },\n      // Tracking an external file\n      {\n        \"entityType\": \"collection\",\n        \"entityId\": \"123d-cwec-32rf23d-24\",\n        \"entityName\": \"root/external-schemas/payments_documentation-external.json\",\n        \"isExternal\": true,\n        \"file\": {\n          \"type\": \"link\",\n          \"contents\": \"dew12.s3.com/c2.json\"\n        }\n      }\n      // ... more files to be created\n    ],\n    \"update\": [\n      {\n        \"entityType\": \"schema\",\n        \"entityId\": \"12e23d-d23d12-1d21\",\n        \"file\": {\n          \"type\": \"raw\",\n          \"contents\": \"{\\\"openapi\\\": \\\"3.0.0\\\"}\"\n        }\n      }\n      // ... more files to be updated\n    ],\n    \"delete\": [\n      {\n        \"entityType\": \"stub\",\n        \"entityId\": \"api-12s-cew-23r1-stub\"\n      }\n      // ... more files to be deleted\n    ] \n  }\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -29908,18 +29919,8 @@
 									"id": "0576efdd-baf1-40d1-b72c-472d9072ffa2",
 									"name": "200",
 									"originalRequest": {
-										"method": "POST",
 										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n  \"name\": \"Sync Hard Limit\",\n  \"template\": {\n    \"body\": [\n      {\n        \"type\": \"text\",\n        \"style\": \"plain\",\n        \"value\": \"the content body {{variable1}} (if required)\"\n      }\n    ],\n    \"title\": \"the title of the notification\",\n    \"actions\": [],\n    \"overrides\": {\n      \"slack\": \"Stringified version of the template\"\n    }\n  }\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{baseUrl}}/notifications/templates"
+										"url": ""
 									},
 									"status": "OK",
 									"code": 200,
@@ -30619,45 +30620,12 @@
 							"id": "3941806a-f3ff-4c6f-b3bc-b620f31bd9d1",
 							"name": "200 OK",
 							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"name": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{baseUrl}}/notifications/integrations/:service",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"notifications",
-										"integrations",
-										":service"
-									],
-									"variable": [
-										{
-											"key": "service",
-											"value": "slack"
-										}
-									]
-								}
+								"header": [],
+								"url": ""
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "json",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "Content-Type",
