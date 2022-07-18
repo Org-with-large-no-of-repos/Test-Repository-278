@@ -9635,7 +9635,37 @@
 						"url": "{{baseUrl}}/integration/permission-check/create",
 						"description": "Checks whether the persona with authentication credentials has RBAC permission to create an integration on the input list of entities.\n\nThe type of entity and an array containing the list of ids of entities are sent as the payload."
 					},
-					"response": []
+					"response": [
+						{
+							"id": "90c4c355-50cf-408f-bb79-1de822b01f5d",
+							"name": "Check Integration creation permission on the list of entities",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"rule\": \"uptime_monitor_notification_slack\",\n    \"entity\": \"entityType\", // Can be one of monitor, uptimeMonitor, collection, team, api, apiversion\n    \"entities\": [\n        {\n            \"id\": \"1ecfaaf4-d7cd-4450-9b0c-42f446d2b6e4\"\n        },\n        {\n            \"id\": \"1ece3018-2e10-4460-82b2-0de3a33c34e0\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/integration/permission-check/create"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
 				}
 			],
 			"id": "28099681-7ca4-479a-8c9a-6e5a3299e48a",
