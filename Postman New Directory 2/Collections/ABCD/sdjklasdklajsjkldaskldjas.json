@@ -9766,7 +9766,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"rule\": \"uptime_monitor_notification_slack\",\n    \"entity\": \"entityType\" // Can be one of monitor, uptimeMonitor, collection, team, api, apiversion\n}",
+									"raw": "{\n    \"rule\": \"uptime_monitor_notification_slack\",\n    \"entity\": \"entityType\", // Can be one of monitor, uptimeMonitor, collection, team, api, apiversion\n    \"entities\": {\n        \"id\": \"1ecfaaf4-d7cd-4450-9b0c-42f446d2b6e4\"\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -9779,7 +9779,7 @@
 							"header": null,
 							"cookie": [],
 							"responseTime": null,
-							"body": "{\n    \"error\": {\n        \"name\": \"paramMissingError\",\n        \"message\": \"Parameter is missing in the request.\",\n        \"details\": {\n            \"param\": \"entities\"\n        }\n    }\n}"
+							"body": "{\n    \"error\": {\n        \"name\": \"invalidParamsError\",\n        \"message\": \"The specified parameter is in an invalid format\",\n        \"details\": {\n            \"param\": \"entities\"\n        }\n    }\n}"
 						}
 					]
 				}
