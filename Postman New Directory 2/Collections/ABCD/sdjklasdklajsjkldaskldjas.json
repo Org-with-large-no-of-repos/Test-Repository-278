@@ -9751,6 +9751,35 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": "{\n    \"error\": {\n        \"name\": \"paramMissingError\",\n        \"message\": \"Parameter is missing in the request.\",\n        \"details\": {\n            \"param\": \"entities\"\n        }\n    }\n}"
+						},
+						{
+							"id": "94ebb630-67e8-46d0-9c47-78dacd9caf61",
+							"name": "400 - Invalid params - entities not an array",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"rule\": \"uptime_monitor_notification_slack\",\n    \"entity\": \"entityType\" // Can be one of monitor, uptimeMonitor, collection, team, api, apiversion\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/integration/permission-check/create"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"error\": {\n        \"name\": \"paramMissingError\",\n        \"message\": \"Parameter is missing in the request.\",\n        \"details\": {\n            \"param\": \"entities\"\n        }\n    }\n}"
 						}
 					]
 				}
