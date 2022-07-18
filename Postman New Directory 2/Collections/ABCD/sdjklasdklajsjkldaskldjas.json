@@ -9626,8 +9626,15 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/integration/permission-check/create"
 					},
 					"response": []
 				}
