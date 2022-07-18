@@ -9721,7 +9721,7 @@
 							"header": null,
 							"cookie": [],
 							"responseTime": null,
-							"body": "{\n    \"error\": {\n        \"name\": \"paramMissingError\",\n        \"message\": \"Parameter is missing in the request.\",\n        \"details\": {\n            \"param\": \"rule\"\n        }\n    }\n}"
+							"body": "{\n    \"error\": {\n        \"name\": \"paramMissingError\",\n        \"message\": \"Parameter is missing in the request.\",\n        \"details\": {\n            \"param\": \"entity\"\n        }\n    }\n}"
 						},
 						{
 							"id": "05fbaada-6eca-40a1-a16b-52b5a275b653",
