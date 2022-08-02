@@ -3292,7 +3292,7 @@
 							"script": {
 								"id": "a13f1217-a5fc-4fde-a5a3-f05d3f561e90",
 								"exec": [
-									"console.log(pm.environment)"
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -3328,9 +3328,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseURL}}/integration-instances/:id/actions/:actionslug",
+							"raw": "{{baseUrl}}/integration-instances/:id/actions/:actionslug",
 							"host": [
-								"{{baseURL}}"
+								"{{baseUrl}}"
 							],
 							"path": [
 								"integration-instances",
@@ -3341,11 +3341,11 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": null
+									"value": "41758"
 								},
 								{
 									"key": "actionslug",
-									"value": null
+									"value": "execute_nrql_query"
 								}
 							]
 						},
