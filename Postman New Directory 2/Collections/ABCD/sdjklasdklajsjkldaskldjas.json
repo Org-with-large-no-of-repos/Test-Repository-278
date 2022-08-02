@@ -7267,6 +7267,175 @@
 			"name": "Integration Helper APIs",
 			"item": [
 				{
+					"name": "Check Integration creation permission on the list of entities",
+					"id": "6fd13913-18f0-4f43-9a39-3177f4f45817",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{accessToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rule\": \"uptime_monitor_notification_slack\",\n    \"entity\": \"entityType\", // Can be one of monitor, uptimeMonitor, collection, team, api, apiversion\n    \"entities\": [\n        {\n            \"id\": \"1ecfaaf4-d7cd-4450-9b0c-42f446d2b6e4\"\n        },\n        {\n            \"id\": \"1ece3018-2e10-4460-82b2-0de3a33c34e0\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/integration/permission-check/create",
+						"description": "Checks whether the persona with authentication credentials has RBAC permission to create an integration on the input list of entities.\n\nThe type of entity and an array containing the list of ids of entities are sent as the payload."
+					},
+					"response": [
+						{
+							"id": "77817f72-0fdb-45b4-935d-8d9035794017",
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{accessToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"rule\": \"uptime_monitor_notification_slack\",\n    \"entity\": \"entityType\", // Can be one of monitor, uptimeMonitor, collection, team, api, apiversion\n    \"entities\": [\n        {\n            \"id\": \"1ecfaaf4-d7cd-4450-9b0c-42f446d2b6e4\"\n        },\n        {\n            \"id\": \"1ece3018-2e10-4460-82b2-0de3a33c34e0\"\n        },\n        {\n            \"id\": \"1ec9b887-630c-4d10-be6d-9f93a46fe64e\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/integration/permission-check/create"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "[\n    {\n        \"id\": \"1ecfaaf4-d7cd-4450-9b0c-42f446d2b6e4\",\n        \"hasPermission\": true\n    },\n    {\n        \"id\": \"1ece3018-2e10-4460-82b2-0de3a33c34e0\",\n        \"hasPermission\": true\n    },\n    {\n        \"id\": \"1ece3017-163e-4f90-ab23-60fe7fdddc37\",\n        \"hasPermission\": true\n    },\n    {\n        \"id\": \"1ec9b887-630c-4d10-be6d-9f93a46fe64d\",\n        \"hasPermission\": true\n    },\n    {\n        \"id\": \"1ec9b887-630c-4d10-be6d-9f93a46fe64e\",\n        \"hasPermission\": false\n    }\n]"
+						},
+						{
+							"id": "af204c01-8a93-4811-a11f-af09889cf525",
+							"name": "400 - Param Missing - rule",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{accessToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"entity\": \"entityType\", // Can be one of monitor, uptimeMonitor, collection, team, api, apiversion\n    \"entities\": [\n        {\n            \"id\": \"1ecfaaf4-d7cd-4450-9b0c-42f446d2b6e4\"\n        },\n        {\n            \"id\": \"1ece3018-2e10-4460-82b2-0de3a33c34e0\"\n        },\n        {\n            \"id\": \"1ec9b887-630c-4d10-be6d-9f93a46fe64e\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/integration/permission-check/create"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"error\": {\n        \"name\": \"paramMissingError\",\n        \"message\": \"Parameter is missing in the request.\",\n        \"details\": {\n            \"param\": \"rule\"\n        }\n    }\n}"
+						},
+						{
+							"id": "e4a11272-40cc-4ebe-843f-f15854c0aad0",
+							"name": "400 - Param Missing - entity",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{accessToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"rule\": \"uptime_monitor_notification_slack\",\n    \"entities\": [\n        {\n            \"id\": \"1ecfaaf4-d7cd-4450-9b0c-42f446d2b6e4\"\n        },\n        {\n            \"id\": \"1ece3018-2e10-4460-82b2-0de3a33c34e0\"\n        },\n        {\n            \"id\": \"1ec9b887-630c-4d10-be6d-9f93a46fe64e\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/integration/permission-check/create"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"error\": {\n        \"name\": \"paramMissingError\",\n        \"message\": \"Parameter is missing in the request.\",\n        \"details\": {\n            \"param\": \"entity\"\n        }\n    }\n}"
+						},
+						{
+							"id": "2cf63d63-689c-40bc-abeb-d7d91c49592c",
+							"name": "400 - Param Missing - entities",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{accessToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"rule\": \"uptime_monitor_notification_slack\",\n    \"entity\": \"entityType\" // Can be one of monitor, uptimeMonitor, collection, team, api, apiversion\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/integration/permission-check/create"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"error\": {\n        \"name\": \"paramMissingError\",\n        \"message\": \"Parameter is missing in the request.\",\n        \"details\": {\n            \"param\": \"entities\"\n        }\n    }\n}"
+						},
+						{
+							"id": "b7461928-73e3-45d7-88a7-50cdbfd74d97",
+							"name": "400 - Invalid params - entities not an array",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{accessToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"rule\": \"uptime_monitor_notification_slack\",\n    \"entity\": \"entityType\", // Can be one of monitor, uptimeMonitor, collection, team, api, apiversion\n    \"entities\": {\n        \"id\": \"1ecfaaf4-d7cd-4450-9b0c-42f446d2b6e4\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/integration/permission-check/create"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"error\": {\n        \"name\": \"invalidParamsError\",\n        \"message\": \"The specified parameter is in an invalid format\",\n        \"details\": {\n            \"param\": \"entities\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
 					"name": "Fetch Relations of an Integration",
 					"id": "d094d1e1-826e-4722-b44b-2becb21aa3be",
 					"protocolProfileBehavior": {
@@ -9605,181 +9774,6 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": "{\n    \"error\": {}\n}"
-						}
-					]
-				},
-				{
-					"name": "Check Integration creation permission on the list of entities",
-					"id": "dda6e413-485f-42ba-aab6-31163c0b40ec",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "x-access-token",
-								"value": "{{accessToken}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"rule\": \"uptime_monitor_notification_slack\",\n    \"entity\": \"entityType\", // Can be one of monitor, uptimeMonitor, collection, team, api, apiversion\n    \"entities\": [\n        {\n            \"id\": \"1ecfaaf4-d7cd-4450-9b0c-42f446d2b6e4\"\n        },\n        {\n            \"id\": \"1ece3018-2e10-4460-82b2-0de3a33c34e0\"\n        }\n    ]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{baseUrl}}/integration/permission-check/create",
-						"description": "Checks whether the persona with authentication credentials has RBAC permission to create an integration on the input list of entities.\n\nThe type of entity and an array containing the list of ids of entities are sent as the payload."
-					},
-					"response": [
-						{
-							"id": "90c4c355-50cf-408f-bb79-1de822b01f5d",
-							"name": "200 - OK",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "x-access-token",
-										"value": "{{accessToken}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"rule\": \"uptime_monitor_notification_slack\",\n    \"entity\": \"entityType\", // Can be one of monitor, uptimeMonitor, collection, team, api, apiversion\n    \"entities\": [\n        {\n            \"id\": \"1ecfaaf4-d7cd-4450-9b0c-42f446d2b6e4\"\n        },\n        {\n            \"id\": \"1ece3018-2e10-4460-82b2-0de3a33c34e0\"\n        },\n        {\n            \"id\": \"1ec9b887-630c-4d10-be6d-9f93a46fe64e\"\n        }\n    ]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseUrl}}/integration/permission-check/create"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "[\n    {\n        \"id\": \"1ecfaaf4-d7cd-4450-9b0c-42f446d2b6e4\",\n        \"hasPermission\": true\n    },\n    {\n        \"id\": \"1ece3018-2e10-4460-82b2-0de3a33c34e0\",\n        \"hasPermission\": true\n    },\n    {\n        \"id\": \"1ece3017-163e-4f90-ab23-60fe7fdddc37\",\n        \"hasPermission\": true\n    },\n    {\n        \"id\": \"1ec9b887-630c-4d10-be6d-9f93a46fe64d\",\n        \"hasPermission\": true\n    },\n    {\n        \"id\": \"1ec9b887-630c-4d10-be6d-9f93a46fe64e\",\n        \"hasPermission\": false\n    }\n]"
-						},
-						{
-							"id": "32c078c7-374b-4f86-8cdc-30fd73ddafa7",
-							"name": "400 - Param Missing - rule",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "x-access-token",
-										"value": "{{accessToken}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"entity\": \"entityType\", // Can be one of monitor, uptimeMonitor, collection, team, api, apiversion\n    \"entities\": [\n        {\n            \"id\": \"1ecfaaf4-d7cd-4450-9b0c-42f446d2b6e4\"\n        },\n        {\n            \"id\": \"1ece3018-2e10-4460-82b2-0de3a33c34e0\"\n        },\n        {\n            \"id\": \"1ec9b887-630c-4d10-be6d-9f93a46fe64e\"\n        }\n    ]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseUrl}}/integration/permission-check/create"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"error\": {\n        \"name\": \"paramMissingError\",\n        \"message\": \"Parameter is missing in the request.\",\n        \"details\": {\n            \"param\": \"rule\"\n        }\n    }\n}"
-						},
-						{
-							"id": "8e99a228-8f82-4dc2-842e-0175af446c56",
-							"name": "400 - Param Missing - entity",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "x-access-token",
-										"value": "{{accessToken}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"rule\": \"uptime_monitor_notification_slack\",\n    \"entities\": [\n        {\n            \"id\": \"1ecfaaf4-d7cd-4450-9b0c-42f446d2b6e4\"\n        },\n        {\n            \"id\": \"1ece3018-2e10-4460-82b2-0de3a33c34e0\"\n        },\n        {\n            \"id\": \"1ec9b887-630c-4d10-be6d-9f93a46fe64e\"\n        }\n    ]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseUrl}}/integration/permission-check/create"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"error\": {\n        \"name\": \"paramMissingError\",\n        \"message\": \"Parameter is missing in the request.\",\n        \"details\": {\n            \"param\": \"entity\"\n        }\n    }\n}"
-						},
-						{
-							"id": "05fbaada-6eca-40a1-a16b-52b5a275b653",
-							"name": "400 - Param Missing - entities",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "x-access-token",
-										"value": "{{accessToken}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"rule\": \"uptime_monitor_notification_slack\",\n    \"entity\": \"entityType\" // Can be one of monitor, uptimeMonitor, collection, team, api, apiversion\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseUrl}}/integration/permission-check/create"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"error\": {\n        \"name\": \"paramMissingError\",\n        \"message\": \"Parameter is missing in the request.\",\n        \"details\": {\n            \"param\": \"entities\"\n        }\n    }\n}"
-						},
-						{
-							"id": "94ebb630-67e8-46d0-9c47-78dacd9caf61",
-							"name": "400 - Invalid params - entities not an array",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "x-access-token",
-										"value": "{{accessToken}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"rule\": \"uptime_monitor_notification_slack\",\n    \"entity\": \"entityType\", // Can be one of monitor, uptimeMonitor, collection, team, api, apiversion\n    \"entities\": {\n        \"id\": \"1ecfaaf4-d7cd-4450-9b0c-42f446d2b6e4\"\n    }\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseUrl}}/integration/permission-check/create"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"error\": {\n        \"name\": \"invalidParamsError\",\n        \"message\": \"The specified parameter is in an invalid format\",\n        \"details\": {\n            \"param\": \"entities\"\n        }\n    }\n}"
 						}
 					]
 				}
@@ -27767,44 +27761,8 @@
 											"id": "dbe5e692-0b6e-459c-b779-6094c46d17e8",
 											"name": "200 OK",
 											"originalRequest": {
-												"method": "POST",
-												"header": [
-													{
-														"key": "Content-Type",
-														"value": "application/json",
-														"type": "text"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n  \"commitMessage\": \"Commit v1 payments API\",\n  \"lastCommit\": \"ch3ds2\",\n  \"actions\": {\n    \"create\": [\n      {\n        \"entityType\": \"collection\",\n        \"entityId\": \"123d-cwec-32rf23d-23\",\n        \"entityName\": \"payments_documentation.json\",\n        \"file\": {\n          \"type\": \"link\",\n          \"contents\": \"dew12.s3.com/c1.json\"\n        }\n      },\n      // Tracking an external file\n      {\n        \"entityType\": \"collection\",\n        \"entityId\": \"123d-cwec-32rf23d-24\",\n        \"entityName\": \"root/external-schemas/payments_documentation-external.json\", // This is the absolute file path\n        \"isExternal\": true,\n        \"file\": {\n          \"type\": \"link\",\n          \"contents\": \"dew12.s3.com/c2.json\"\n        }\n      }\n      // ... more files to be created\n    ],\n    \"update\": [\n      {\n        \"entityType\": \"schema\",\n        \"entityId\": \"12e23d-d23d12-1d21\",\n        \"file\": {\n          \"type\": \"raw\",\n          \"contents\": \"{\\\"openapi\\\": \\\"3.0.0\\\"}\"\n        }\n      }\n      // ... more files to be updated\n    ],\n    \"delete\": [\n      {\n        \"entityType\": \"stub\",\n        \"entityId\": \"api-12s-cew-23r1-stub\"\n      }\n      // ... more files to be deleted\n    ] \n  }\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{baseUrl}}/git/api-repository/changes?apiVersion=1d2-c2ec234ec-c123e12d2w-12d&branch=develop",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"git",
-														"api-repository",
-														"changes"
-													],
-													"query": [
-														{
-															"key": "apiVersion",
-															"value": "1d2-c2ec234ec-c123e12d2w-12d"
-														},
-														{
-															"key": "branch",
-															"value": "develop"
-														}
-													]
-												}
+												"header": [],
+												"url": ""
 											},
 											"status": "OK",
 											"code": 200,
