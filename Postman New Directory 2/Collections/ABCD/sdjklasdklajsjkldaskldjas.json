@@ -3292,7 +3292,7 @@
 							"script": {
 								"id": "a13f1217-a5fc-4fde-a5a3-f05d3f561e90",
 								"exec": [
-									"console.log(pm.request)"
+									"console.log(pm.environment)"
 								],
 								"type": "text/javascript"
 							}
