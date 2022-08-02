@@ -3286,6 +3286,18 @@
 				},
 				{
 					"name": "on-demand/manual trigger",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "a13f1217-a5fc-4fde-a5a3-f05d3f561e90",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "ba3b3556-5f29-4ae4-8e92-2027239b443a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
