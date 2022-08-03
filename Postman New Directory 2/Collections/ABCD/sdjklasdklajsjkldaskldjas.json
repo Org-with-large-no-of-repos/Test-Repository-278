@@ -3320,7 +3320,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"inputs\": {\n        \"query\": \"{ actor { entitySearch(queryBuilder: {domain: APM, type: APPLICATION}) { query results { entities { name guid tags { key values } account { id name } ... on ApmApplicationEntityOutline { applicationId } } nextCursor } count } } }\"\n    }\n}",
+							"raw": "{\n    \"inputs\": {\n        \"query\": \"{ actor { accounts(scope: GLOBAL) { id name } } }\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
