@@ -31728,6 +31728,456 @@
 				}
 			],
 			"id": "ba74426f-2c85-4352-819d-d14b5deb9a7f"
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Authentication Instance",
+					"item": [
+						{
+							"name": "Create authentication instance",
+							"id": "bd290266-2489-40a6-bc52-d8c5ecaad678",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"authenticationClass\": \"Id of the authenticationClass\",\n    \"scopeType\": \"<ENUM> Type of scope this auth instance will belong to\",\n    \"scopeIdentifier\": \"Id of the corresponding scope type, if scope is API it will be API id\",\n    \"data\": {\n        \"key1\": \"value1\",\n        \"key2\": \"value2\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/authentication-instances/"
+							},
+							"response": [
+								{
+									"id": "3b844f02-12bb-40bc-9e6a-322c861b2b1c",
+									"name": "201: Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"authenticationClass\": \"Id of the authenticationClass\",\n    \"scopeType\": \"<ENUM> Type of scope this auth instance will belong to\",\n    \"scopeIdentifier\": \"Id of the corresponding scope type, if scope is API it will be API id\",\n    \"data\": {\n        \"key1\": \"value1\",\n        \"key2\": \"value2\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/authentication-instances/"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"model_id\": 3020,\n    \"meta\": {\n        \"model\": \"authentication_instance\",\n        \"action\": \"create\"\n    },\n    \"data\": {\n        //Contains complete data of authentication instance as object\n    }\n}"
+								},
+								{
+									"id": "0797507e-d843-400b-9a17-f5b233d82437",
+									"name": "400: Mandatory data missing",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": "{{baseUrl}}/authentication-instances/"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"error\": {\n        \"name\": \"mandatoryVariablesMissingError\",\n        \"message\": \"One or more mandatory variable is missing for this authentication instance\",\n        \"details\": {\n            \"mandatory_variables\": [], // List of all mandatory variables\n            \"missing_variables\": [] // List of all missing variables\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete authentication instance",
+							"id": "d4ea46cb-d80d-4369-9a68-5c07b184855b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/authentication-instances/:authenticationInstanceId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication-instances",
+										":authenticationInstanceId"
+									],
+									"variable": [
+										{
+											"id": "3f4b0220-45e9-45dc-a50e-d192b90b306d",
+											"key": "authenticationInstanceId",
+											"value": null,
+											"description": "Id of the authentication instance to delete"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "b896bbb2-4e67-4870-b16c-66acab0ebf01",
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/authentication-instances/:authenticationInstanceId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"authentication-instances",
+												":authenticationInstanceId"
+											],
+											"variable": [
+												{
+													"key": "authenticationInstanceId",
+													"value": "12345"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"model_id\": \"12345\",\n    \"meta\": {\n        \"model\": \"authentication_instance\",\n        \"action\": \"destroy\"\n    }\n}"
+								},
+								{
+									"id": "bc5d8ed5-019c-4ff5-9324-5be4a606379a",
+									"name": "404: Instance not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/authentication-instances/:authenticationInstanceId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"authentication-instances",
+												":authenticationInstanceId"
+											],
+											"variable": [
+												{
+													"key": "authenticationInstanceId",
+													"value": "12345",
+													"description": "Id of the authentication instance to delete"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"error\": {\n        \"name\": \"instanceNotFoundError\",\n        \"message\": \"We could not find the authentication instacnce you are looking for\",\n        \"details\": {\n            \"model\": \"authentication_instance\",\n            \"model_id\": \"12345\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update authentication instance",
+							"id": "6efbb03a-261f-4c8b-9a8d-bf2dfc516931",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n        \"key1\": \"oldValue\",\n        \"key2\": \"newValue\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication-instances/:authenticationInstanceId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication-instances",
+										":authenticationInstanceId"
+									],
+									"variable": [
+										{
+											"id": "bae266c2-b52e-496a-8d48-6870201739f0",
+											"key": "authenticationInstanceId",
+											"value": null,
+											"description": "Id of the authentication instance to delete"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "283b2276-a0fc-40c0-8211-d8f889113cfb",
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"data\": {\n        \"key1\": \"oldValue\",\n        \"key2\": \"newValue\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/authentication-instances/:authenticationInstanceId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"authentication-instances",
+												":authenticationInstanceId"
+											],
+											"variable": [
+												{
+													"key": "authenticationInstanceId",
+													"value": "1234",
+													"description": "Id of the authentication instance to delete"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"model_id\": 1234,\n    \"meta\": {\n        \"model\": \"authentication_instance\",\n        \"action\": \"update\"\n    },\n    \"data\": {\n        //Contains complete data of authentication instance as object\n    }\n}"
+								},
+								{
+									"id": "ce73f153-922a-4515-b875-1b8014402aa4",
+									"name": "404: Instance not found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"data\": {\n        \"key1\": \"oldValue\",\n        \"key2\": \"newValue\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/authentication-instances/:authenticationInstanceId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"authentication-instances",
+												":authenticationInstanceId"
+											],
+											"variable": [
+												{
+													"key": "authenticationInstanceId",
+													"value": "12345",
+													"description": "Id of the authentication instance to delete"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"error\": {\n        \"name\": \"instanceNotFoundError\",\n        \"message\": \"We could not find the authentication instacnce you are looking for\",\n        \"details\": {\n            \"model\": \"authentication_instance\",\n            \"model_id\": \"12345\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "List authentication instances",
+							"id": "7c6da8d4-6273-463d-897f-af35e86a2d51",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"filter\": {\n        \"scope\": [ {\"type\": \"\", \"id\": \"\"} ],\n        \"authenticationClass\": [],\n        \"service\": [],\n        \"installedApp\": [] // can be single string\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/authentication-instances/list",
+								"description": "If no scope is sent in the API call we will deault to `team` scope."
+							},
+							"response": [
+								{
+									"id": "6b3d2788-815f-440b-a551-e138e750cd01",
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/authentication-instances/:scopeType/:scopeId?authenticationClass",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"authentication-instances",
+												":scopeType",
+												":scopeId"
+											],
+											"query": [
+												{
+													"key": "authenticationClass",
+													"value": null,
+													"description": "[Optional] Get authentication instances of the given authentication class"
+												}
+											],
+											"variable": [
+												{
+													"key": "scopeType",
+													"value": null,
+													"description": "[ENUM] Type of scope for the authentication instance"
+												},
+												{
+													"key": "scopeId",
+													"value": null,
+													"description": "Id of the scope"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"meta\": {\n        \"model\": \"authentication_instance\",\n        \"action\": \"list\"\n    },\n    \"data\": [{\n        //Contains complete data of authentication instance as object\n    }]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get authentication instance",
+							"id": "bf2b1b74-5c0b-46c2-b461-38bccfe94515",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/authentication-instances/:authenticationInstanceId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication-instances",
+										":authenticationInstanceId"
+									],
+									"variable": [
+										{
+											"id": "9f82688f-aa71-4330-8f4a-fe306a1dbe3c",
+											"key": "authenticationInstanceId",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "57061cc6-28b0-4ec1-9b9c-600e513d1982",
+									"name": "200: Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/authentication-instances/:authenticationInstanceId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"authentication-instances",
+												":authenticationInstanceId"
+											],
+											"variable": [
+												{
+													"key": "authenticationInstanceId",
+													"value": "1234"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"model_id\": \"1234\",\n    \"meta\": {\n        \"model\": \"authentication_instance\",\n        \"action\": \"find\"\n    },\n    \"data\": {\n        // Contains complete data of authentication instance as object\n    }\n}"
+								},
+								{
+									"id": "fa7df783-c81a-44b3-b90a-849c1ac8b0ff",
+									"name": "404: Instance not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/authentication-instances/:authenticationInstanceId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"authentication-instances",
+												":authenticationInstanceId"
+											],
+											"variable": [
+												{
+													"key": "authenticationInstanceId",
+													"value": "12345"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"error\": {\n        \"name\": \"instanceNotFoundError\",\n        \"message\": \"We could not find the authentication instacnce you are looking for\",\n        \"details\": {\n            \"model\": \"authentication_instance\",\n            \"model_id\": \"12345\"\n        }\n    }\n}"
+								}
+							]
+						}
+					],
+					"id": "2d81331a-2fdf-4c89-b39d-79b2c6aafc6c",
+					"description": "CRUD endpoints for authentication instances.\n\nBy default the user will be able work with the authentication instances of her own team. i.e., all endpoints will use the user's team by default.\n\nHence, for delete/update/list endpoints a default filter of `team` is present and for create endpoint user's team will also be added.\n\nFor all the endpoints in access control checks we will also verify if the requesting user have appropriate permissions on the corresponding scope of the authentication instance or not too."
+				}
+			],
+			"id": "06ae08c6-ee9f-4a9c-bd9a-d76bc08ae26c"
 		}
 	],
 	"event": [
