@@ -45,7 +45,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/v2/integration?populateUsers=true&populateEntities=true&count=50&lite=true",
+							"raw": "{{baseUrl}}/v2/integration?count=1&lite=true",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -54,16 +54,6 @@
 								"integration"
 							],
 							"query": [
-								{
-									"key": "populateUsers",
-									"value": "true",
-									"description": "Default: `false`. When set to true, the `createdBy` and `lastUpdatedBy` fields are returned as objects with user information, instead of string IDs."
-								},
-								{
-									"key": "populateEntities",
-									"value": "true",
-									"description": "Default: `false`. When set to true, the `entity` fields are returned as objects with`type`, `name` and `id` informtation, instead of just strings."
-								},
 								{
 									"key": "serviceId",
 									"value": "github",
@@ -96,7 +86,7 @@
 								},
 								{
 									"key": "count",
-									"value": "50",
+									"value": "1",
 									"description": "Parameter used for pagination. Describes how many integrations need to be returned per page. Defaults to 100."
 								},
 								{
