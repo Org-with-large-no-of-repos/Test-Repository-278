@@ -37,9 +37,15 @@
 							}
 						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "{{baseUrl}}/v2/integration?populateUsers=true&populateEntities=true&serviceId=github&rule=collection_github&workspace={{workspaceId}}&entityType={{entityType}}&entityId={{entityId}}&count=10&page=1&internal=true&clientCategory=schema_sync-api-repository&lite=false",
+							"raw": "{{baseUrl}}/v2/integration?populateUsers=true&populateEntities=true&count=50&lite=true",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -61,51 +67,59 @@
 								{
 									"key": "serviceId",
 									"value": "github",
-									"description": "Only returns the list of added integrations belonging to the sent `serviceId`. Eg: `github`, `slack`"
+									"description": "Only returns the list of added integrations belonging to the sent `serviceId`. Eg: `github`, `slack`",
+									"disabled": true
 								},
 								{
 									"key": "rule",
 									"value": "collection_github",
-									"description": "Only returns the list of added integrations belonging to the sent rule. Eg: collection_github, teamactivity_slack"
+									"description": "Only returns the list of added integrations belonging to the sent rule. Eg: collection_github, teamactivity_slack",
+									"disabled": true
 								},
 								{
 									"key": "workspace",
 									"value": "{{workspaceId}}",
-									"description": "Only returns integrations on entities in the given workspace. Eg: 92a0e9c1-beab-4c0e-858e-29bf9e973094"
+									"description": "Only returns integrations on entities in the given workspace. Eg: 92a0e9c1-beab-4c0e-858e-29bf9e973094",
+									"disabled": true
 								},
 								{
 									"key": "entityType",
 									"value": "{{entityType}}",
-									"description": "Only returns the list of integrations that are configured on the given entity type. Eg: team, collection, jobTemplate"
+									"description": "Only returns the list of integrations that are configured on the given entity type. Eg: team, collection, jobTemplate",
+									"disabled": true
 								},
 								{
 									"key": "entityId",
 									"value": "{{entityId}}",
-									"description": "Returns integrations that are configured on the given entity. Entity is defined by entity type + entity ID, so it is required to send `entityType` along with this parameter. Eg: 10272186-600f662c-0123-4974-a1b5-95b90f81a284"
+									"description": "Returns integrations that are configured on the given entity. Entity is defined by entity type + entity ID, so it is required to send `entityType` along with this parameter. Eg: 10272186-600f662c-0123-4974-a1b5-95b90f81a284",
+									"disabled": true
 								},
 								{
 									"key": "count",
-									"value": "10",
+									"value": "50",
 									"description": "Parameter used for pagination. Describes how many integrations need to be returned per page. Defaults to 100."
 								},
 								{
 									"key": "page",
 									"value": "1",
-									"description": "Parameter used for pagination. Describes the page number in the list of pages. Starts with 1."
+									"description": "Parameter used for pagination. Describes the page number in the list of pages. Starts with 1.",
+									"disabled": true
 								},
 								{
 									"key": "internal",
 									"value": "true",
-									"description": "Default: `false`. When set to true, internal integrations are also returned in the response."
+									"description": "Default: `false`. When set to true, internal integrations are also returned in the response.",
+									"disabled": true
 								},
 								{
 									"key": "clientCategory",
 									"value": "schema_sync-api-repository",
-									"description": "Only returns the list of added integrations belonging to the sent `clientCategory`"
+									"description": "Only returns the list of added integrations belonging to the sent `clientCategory`",
+									"disabled": true
 								},
 								{
 									"key": "lite",
-									"value": "false",
+									"value": "true",
 									"description": "Default: `false`. When set to true, it. the API returns minimal integration information."
 								}
 							]
