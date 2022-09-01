@@ -6553,7 +6553,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"inputs\": {\n        \"query\": \"xxx\",\n        // \"repository\": \"R1\"\n    }\n}",
+									"raw": "{\n    \"inputs\": {\n        \"query\": \"xxx\"\n        // \"repository\": \"R1\"\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
