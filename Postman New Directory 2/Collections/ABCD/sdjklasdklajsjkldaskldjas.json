@@ -6553,7 +6553,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"integration\": {\n        \"instanceId\": \"I1\",\n        \"classId\": \"C1\",\n        \"classInputId\": \"In1\"\n    },\n    \"inputs\": {\n        \"accessToken\": \"xxx\",\n        \"repository\": \"R1\"\n    }\n}",
+									"raw": "{\n    \"inputs\": {\n        \"query\": \"xxx\",\n        // \"repository\": \"R1\"\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -6574,14 +6574,12 @@
 									],
 									"variable": [
 										{
-											"id": "0359639b-01f1-4cf4-babb-cebe885d3435",
 											"key": "serviceId",
-											"value": null
+											"value": "apm_new_relic"
 										},
 										{
-											"id": "a3e1a13d-600a-4984-90e0-f4e9ddffb459",
 											"key": "actionId",
-											"value": null
+											"value": "3ca0ccc3-01ed-4cfb-b623-4d869adb41a6"
 										}
 									]
 								}
