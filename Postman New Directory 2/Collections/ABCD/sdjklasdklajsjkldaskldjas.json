@@ -27409,6 +27409,7 @@
 											"id": "fbb801f9-84bd-4db9-afc3-e7c16fbaa770",
 											"name": "200 - Recursive Flag missing",
 											"originalRequest": {
+												"method": "GET",
 												"header": [],
 												"url": {
 													"raw": "?apiVersion=1d2-c2ec234ec-c123e12d2w-12d&branch=main",
@@ -27431,7 +27432,7 @@
 											},
 											"status": "OK",
 											"code": 200,
-											"_postman_previewlanguage": "Text",
+											"_postman_previewlanguage": "json",
 											"header": [
 												{
 													"key": "Content-Type",
