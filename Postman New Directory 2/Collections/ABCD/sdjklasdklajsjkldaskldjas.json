@@ -3890,7 +3890,7 @@
 								},
 								{
 									"id": "2e6a1be1-00d7-42f9-970f-457c4aafafa6",
-									"name": "List Integration Classes",
+									"name": "List Integration Classes (internal true)",
 									"originalRequest": {
 										"method": "GET",
 										"header": [
