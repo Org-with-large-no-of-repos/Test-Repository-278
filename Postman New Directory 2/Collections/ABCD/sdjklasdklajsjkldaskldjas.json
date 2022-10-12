@@ -32082,7 +32082,7 @@
 								},
 								{
 									"id": "32b9ce76-a521-4092-805b-c747fce1aeac",
-									"name": "Delete authentication instance",
+									"name": "403: Forbidden Error",
 									"originalRequest": {
 										"method": "DELETE",
 										"header": [],
