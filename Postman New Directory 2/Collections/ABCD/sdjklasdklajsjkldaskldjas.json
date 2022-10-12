@@ -31991,7 +31991,7 @@
 								},
 								{
 									"id": "5431ed91-30ac-4152-b5c4-0da367bb28dd",
-									"name": "Delete authentication instance",
+									"name": "200: Success",
 									"originalRequest": {
 										"method": "DELETE",
 										"header": [],
