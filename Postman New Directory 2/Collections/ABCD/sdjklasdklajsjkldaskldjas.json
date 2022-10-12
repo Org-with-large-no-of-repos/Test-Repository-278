@@ -31988,6 +31988,79 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\n    \"error\": {\n        \"name\": \"instanceNotFoundError\",\n        \"message\": \"We could not find the authentication instacnce you are looking for\",\n        \"details\": {\n            \"model\": \"authentication_instance\",\n            \"model_id\": \"12345\"\n        }\n    }\n}"
+								},
+								{
+									"id": "5431ed91-30ac-4152-b5c4-0da367bb28dd",
+									"name": "Delete authentication instance",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/authentication-instances/:authenticationInstanceId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"authentication-instances",
+												":authenticationInstanceId"
+											],
+											"variable": [
+												{
+													"key": "authenticationInstanceId",
+													"value": "a3018b78-3ad7-4924-b516-9d8f830f49c2",
+													"description": "Id of the authentication instance to delete"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 12 Oct 2022 14:46:19 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=63072000; includeSubDomains"
+										},
+										{
+											"key": "x-srv-trace",
+											"value": "v=1;t=1352e0ff0b5f8b53"
+										},
+										{
+											"key": "x-srv-span",
+											"value": "v=1;s=0c7afc8887460479"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"a6-wOEM7fehvln2N6GvG2JgsA\""
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"model_id\": \"a3018b78-3ad7-4924-b516-9d8f830f49c2\",\n    \"meta\": {\n        \"model\": \"authentication-instances\",\n        \"action\": \"delete\"\n    },\n    \"data\": {\n        \"id\": \"a3018b78-3ad7-4924-b516-9d8f830f49c2\"\n    }\n}"
 								}
 							]
 						},
