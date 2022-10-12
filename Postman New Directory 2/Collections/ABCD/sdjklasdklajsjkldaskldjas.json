@@ -31906,6 +31906,13 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": {
+										"value": "02eeda4c52393244cb4e65834e76616c8f4a129ed8f4bf8bb0bf1cc1c8880934b01114d84adcb63cbf5e4ccb41eb387dc7f4653ae0e794b238f5544f467d1cda",
+										"key": "x-access-token"
+									}
+								},
 								"method": "DELETE",
 								"header": [],
 								"url": {
@@ -31919,9 +31926,8 @@
 									],
 									"variable": [
 										{
-											"id": "3f4b0220-45e9-45dc-a50e-d192b90b306d",
 											"key": "authenticationInstanceId",
-											"value": null,
+											"value": "a3018b78-3ad7-4924-b516-9d8f830f49c2",
 											"description": "Id of the authentication instance to delete"
 										}
 									]
