@@ -31822,6 +31822,137 @@
 									"body": "{\n \"error\": {\n  \"name\": \"Ut tempor ullamco\",\n  \"message\": \"nulla et sint culpa\",\n  \"details\": {}\n }\n}"
 								}
 							]
+						},
+						{
+							"name": "Get Integration Instance list",
+							"id": "0d7f147d-ff5f-479b-9583-c9f59dcfc39f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{userAccessToken}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/integration-instances?entityType={{entityType}}&entityId={{entityId}}&clientCategory=apm_api-observability,api-gateway-observability,continuous-integration",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"integration-instances"
+									],
+									"query": [
+										{
+											"key": "entityType",
+											"value": "{{entityType}}",
+											"description": "optional"
+										},
+										{
+											"key": "entityId",
+											"value": "{{entityId}}",
+											"description": "optional. A combination of entityType + entityId has to be given to uniquely identify configured integration"
+										},
+										{
+											"key": "clientCategory",
+											"value": "apm_api-observability,api-gateway-observability,continuous-integration",
+											"description": "optional space separated clientCategory filters"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "ef46a0c9-4d98-4655-9d39-1fca55d32384",
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-access-token",
+												"value": "{{userAccessToken}}"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/integration-instances?entityType={{entityType}}&entityId={{entityId}}&clientCategory=apm_api-observability,api-gateway-observability,continuous-integration",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"integration-instances"
+											],
+											"query": [
+												{
+													"key": "entityType",
+													"value": "{{entityType}}",
+													"description": "optional. "
+												},
+												{
+													"key": "entityId",
+													"value": "{{entityId}}",
+													"description": "optional. A combination of entityType + entityId has to be given to uniquely identify configured integration"
+												},
+												{
+													"key": "clientCategory",
+													"value": "apm_api-observability,api-gateway-observability,continuous-integration",
+													"description": "optional comma separated clientCategory filters"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 18 Aug 2022 15:39:30 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "strict-transport-security",
+											"value": "max-age=63072000; includeSubDomains"
+										},
+										{
+											"key": "x-srv-trace",
+											"value": "v=1;t=48008f59e0d00adb"
+										},
+										{
+											"key": "x-srv-span",
+											"value": "v=1;s=728ca647aaaf2fe5"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"cba-sd4Sh0B9sCUQNz5UR2jU3g\""
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"model_id\": null,\n    \"meta\": {\n        \"model\": \"integrationinstance\",\n        \"action\": \"list\"\n    },\n    \"data\": [\n        {\n            \"id\": 48444,\n            \"inputs\": [\n                {\n                    \"key\": \"postman_api_id\",\n                    \"type\": \"postman-api\",\n                    \"value\": \"0039019f-9cc8-4e91-8305-a65bc0fd03be\",\n                    \"inputId\": \"f10f969d-9fde-4755-946d-8621d666c319\"\n                },\n                {\n                    \"key\": \"service_guids\",\n                    \"type\": \"array\",\n                    \"value\": [\n                        \"abc\"\n                    ],\n                    \"inputId\": \"ef87dd9c-ad31-429c-968c-7fe1614873df\"\n                },\n                {\n                    \"key\": \"region\",\n                    \"type\": \"string\",\n                    \"value\": \"us\",\n                    \"inputId\": \"55cdcf97-85e4-408c-93e4-d142b7a01968\"\n                },\n                {\n                    \"key\": \"apiversion\",\n                    \"type\": \"postman-apiversion\",\n                    \"value\": \"a90b6516-9f9a-4356-aadc-6b8f3435f162\",\n                    \"inputId\": \"0a0c5a52-4657-43ab-ba7b-05646450e050\"\n                },\n                {\n                    \"key\": \"dashboard_guids\",\n                    \"type\": \"array\",\n                    \"value\": [\n                        \"xyz\"\n                    ],\n                    \"inputId\": \"07492391-14cb-4a73-bea5-79249b00d583\"\n                }\n            ],\n            \"createdBy\": \"894474\",\n            \"lastUpdatedBy\": \"894474\",\n            \"team\": \"1\",\n            \"name\": \"APM with NewRelic\",\n            \"createdAt\": \"2022-08-18T15:35:37.000Z\",\n            \"updatedAt\": \"2022-08-18T15:35:37.000Z\",\n            \"class\": \"apm_new_relic\"\n        }\n    ]\n}"
+								}
+							]
 						}
 					],
 					"id": "7a15370a-79af-4a34-b7df-06cd595ad45e"
