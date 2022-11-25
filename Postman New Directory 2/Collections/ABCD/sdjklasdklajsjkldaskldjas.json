@@ -6634,10 +6634,10 @@
 							},
 							"request": {
 								"auth": {
-									"type": "basic",
-									"basic": {
-										"password": "{{intPlatPwd}}",
-										"username": "{{intPlatUSer}}"
+									"type": "apikey",
+									"apikey": {
+										"value": "{{userAccessToken}}",
+										"key": "x-access-token"
 									}
 								},
 								"method": "POST",
@@ -6650,7 +6650,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"inputs\": {\n        \"query\": \"xxx\"\n        // \"repository\": \"R1\"\n    }\n}",
+									"raw": "{\n    \"integration\": {\n        \"classId\": \"apm_new_relic\"\n    },\n    \"inputs\": {\n        \"query\": \"{ requestContext { userId apiKey } }\" \n    },\n    \"authenticationInstanceId\": \"ec56df2f-03a0-420e-b2b4-4aec1afb3774\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -6676,7 +6676,7 @@
 										},
 										{
 											"key": "actionId",
-											"value": "3ca0ccc3-01ed-4cfb-b623-4d869adb41a6"
+											"value": "d0728d36-470b-402b-81f7-dac55ef760b4"
 										}
 									]
 								}
