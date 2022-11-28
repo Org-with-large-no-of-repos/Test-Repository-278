@@ -6658,25 +6658,15 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/services/:serviceId/actions/:actionId/run",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"services",
-										":serviceId",
-										"actions",
-										":actionId",
-										"run"
-									],
+									"raw": "",
 									"variable": [
 										{
-											"key": "serviceId",
-											"value": "apm_new_relic"
+											"value": "apm_new_relic",
+											"key": "serviceId"
 										},
 										{
-											"key": "actionId",
-											"value": "ec56df2f-03a0-420e-b2b4-4aec1afb3774"
+											"value": "ec56df2f-03a0-420e-b2b4-4aec1afb3774",
+											"key": "actionId"
 										}
 									]
 								}
@@ -31973,11 +31963,18 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": {
+										"value": "{{userAccessToken}}",
+										"key": "x-access-token"
+									}
+								},
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"authenticationClass\": \"Id of the authenticationClass\",\n    \"scopeType\": \"<ENUM> Type of scope this auth instance will belong to\",\n    \"scopeIdentifier\": \"Id of the corresponding scope type, if scope is API it will be API id\",\n    \"data\": {\n        \"key1\": \"value1\",\n        \"key2\": \"value2\"\n    }\n}",
+									"raw": "{\n    \"authenticationClass\": \"Id of the authenticationClass\",\n    \"scopeType\": \"<ENUM> Type of scope this auth instance will belong to\",\n    \"scopeId\": \"Id of the corresponding scope type, if scope is API it will be API id\",\n    \"data\": {\n        \"key1\": \"value1\",\n        \"key2\": \"value2\"\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -31995,7 +31992,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"authenticationClass\": \"Id of the authenticationClass\",\n    \"scopeType\": \"<ENUM> Type of scope this auth instance will belong to\",\n    \"scopeIdentifier\": \"Id of the corresponding scope type, if scope is API it will be API id\",\n    \"data\": {\n        \"key1\": \"value1\",\n        \"key2\": \"value2\"\n    }\n}",
+											"raw": "{\n    \"authenticationClass\": \"Id of the authenticationClass\",\n    \"scopeType\": \"<ENUM> Type of scope this auth instance will belong to\",\n    \"scopeId\": \"Id of the corresponding scope type, if scope is API it will be API id\",\n    \"data\": {\n        \"key1\": \"value1\",\n        \"key2\": \"value2\"\n    }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -32004,29 +32001,151 @@
 										},
 										"url": "{{baseUrl}}/authentication-instances/"
 									},
-									"status": "Created",
-									"code": 201,
-									"_postman_previewlanguage": "json",
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n    \"model_id\": 3020,\n    \"meta\": {\n        \"model\": \"authentication_instance\",\n        \"action\": \"create\"\n    },\n    \"data\": {\n        //Contains complete data of authentication instance as object\n    }\n}"
+									"body": "{\n    \"meta\": {\n        \"model\": \"authentication_instance\",\n        \"action\": \"create\"\n    },\n    \"data\": [{}] // array of created auth instances objects\n}"
+								},
+								{
+									"id": "320470fe-4cac-4701-82a3-38f1d61adec5",
+									"name": "200: Create authenticaiton instances [New Relic]",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"authenticationClass\": \"new_relic_user\",\n    \"scopeType\": \"team\", // user and team scope is allowed\n    \"scopeId\": \"<teamId>\", // userId for userScope\n    \"data\": {\n        \"user_key\": \"NR-XXXXXXXXX\",\n        \"region\": \"us\" // us and uk are supported\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/authentication-instances/"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": ""
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"meta\": {\n        \"model\": \"authentication-instances\",\n        \"action\": \"create\"\n    },\n    \"data\": [\n        {\n            \"authenticationClass\": \"new_relic_user\",\n            \"scopeType\": \"team\",\n            \"scopeState\": \"permanent\",\n            \"scopeId\": \"<teamId/userId>\",\n            \"data\": {\n                \"region\": \"us\"\n            },\n            \"team\": \"teamId\",\n            \"createdBy\": \"<useId>\",\n            \"id\": \"af96a8cb-6134-4d2e-9e20-47398d0bf252\",\n            \"createdAt\": \"2022-11-24T06:04:54.006Z\",\n            \"updatedAt\": \"2022-11-24T06:04:54.006Z\",\n            \"service\": \"apm_new_relic\"\n        }\n    ]\n}"
 								},
 								{
 									"id": "0797507e-d843-400b-9a17-f5b233d82437",
-									"name": "400: Mandatory data missing",
+									"name": "500: Mandatory param missing error",
 									"originalRequest": {
 										"method": "POST",
 										"header": [],
 										"url": "{{baseUrl}}/authentication-instances/"
 									},
-									"status": "Bad Request",
-									"code": 400,
-									"_postman_previewlanguage": "json",
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "Text",
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n    \"error\": {\n        \"name\": \"mandatoryVariablesMissingError\",\n        \"message\": \"One or more mandatory variable is missing for this authentication instance\",\n        \"details\": {\n            \"mandatory_variables\": [], // List of all mandatory variables\n            \"missing_variables\": [] // List of all missing variables\n        }\n    }\n}"
+									"body": "{\n    \"error\": {\n        \"name\": \"MandatoryKeysMissingError\",\n        \"model\": \"AuthenticationInstance\",\n        \"message\": \"Mandatory data missing for AuthenticationInstance. Missing key(s): ${missingKeysString}\",\n        \"missingKeys\": [// array of missing keys]\n    }\n}"
+								},
+								{
+									"id": "143dd116-97f1-4708-b7a8-495c6ac6febb",
+									"name": "500: RegionNotSupportedError",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"authenticationClass\": \"Id of the authenticationClass\",\n    \"scopeType\": \"<ENUM> Type of scope this auth instance will belong to\",\n    \"scopeId\": \"Id of the corresponding scope type, if scope is API it will be API id\",\n    \"data\": {\n        \"key1\": \"value1\",\n        \"key2\": \"value2\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/authentication-instances/"
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": ""
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"error\": {\n        \"name\": \"RegionNotSupportedError\",\n        \"message\": \"Region ${region} is not supported by New Relic\",\n        \"details\": {\n            \"message\": \"\"\n        }\n    }\n}"
+								},
+								{
+									"id": "e932e3fe-c63e-48e5-94d9-3041c20df6c0",
+									"name": "500: AuthenticationClassNotFoundError",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"authenticationClass\": \"Id of the authenticationClass\",\n    \"scopeType\": \"<ENUM> Type of scope this auth instance will belong to\",\n    \"scopeId\": \"Id of the corresponding scope type, if scope is API it will be API id\",\n    \"data\": {\n        \"key1\": \"value1\",\n        \"key2\": \"value2\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/authentication-instances/"
+									},
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": ""
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"error\": {\n        \"name\": \"AuthenticationClassNotFoundError\",\n        \"message\": \"Something went wrong while authenticating.\",\n        \"details\": {\n            \"message\": \"\"\n        }\n    }\n}"
+								},
+								{
+									"id": "1c7f412b-1273-45ec-8f43-a47cfa24154c",
+									"name": "500: AuthenticationInstanceForbiddenError",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"authenticationClass\": \"Id of the authenticationClass\",\n    \"scopeType\": \"<ENUM> Type of scope this auth instance will belong to\",\n    \"scopeId\": \"Id of the corresponding scope type, if scope is API it will be API id\",\n    \"data\": {\n        \"key1\": \"value1\",\n        \"key2\": \"value2\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/authentication-instances/"
+									},
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": ""
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"error\": {\n        \"name\": \"AuthenticationInstanceForbiddenError\",\n        \"message\": \"You do not have permission to access the AuthenticationInstance\",\n        \"details\": {\n            \"message\": \"\"\n        }\n    }\n}"
 								}
 							]
 						},
