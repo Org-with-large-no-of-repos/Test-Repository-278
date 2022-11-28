@@ -6658,15 +6658,24 @@
 									}
 								},
 								"url": {
-									"raw": "",
+									"raw": "{{baseUrl}}/integration-instances/:id/actions/:actionslug",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"integration-instances",
+										":id",
+										"actions",
+										":actionslug"
+									],
 									"variable": [
 										{
-											"value": "apm_new_relic",
-											"key": "serviceId"
+											"key": "id",
+											"value": null
 										},
 										{
-											"value": "ec56df2f-03a0-420e-b2b4-4aec1afb3774",
-											"key": "actionId"
+											"key": "actionslug",
+											"value": null
 										}
 									]
 								}
