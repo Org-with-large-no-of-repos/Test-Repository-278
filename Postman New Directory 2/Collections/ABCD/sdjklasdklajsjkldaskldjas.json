@@ -6641,16 +6641,10 @@
 									}
 								},
 								"method": "POST",
-								"header": [
-									{
-										"key": "x-access-token",
-										"value": "{{userAccessToken}}",
-										"type": "text"
-									}
-								],
+								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"integration\": {\n        \"classInputId\": \"\"\n    },\n    \"inputs\": {\n        // inputs\n    }\n}",
+									"raw": "{\n    \"integration\": {\n        \"classInputId\": \"\", // optional input\n        \"classId\": \"\",\n        \"instanceId\": \"\" // Either classId or instanceId should be present\n    },\n    \"inputs\": {\n        // inputs required for a running a service action\n        \"[service auth type input key]\": \"<authInstanceId> (or) an object containing either {connectedAccountId} or {tokenId}\" // optional. Used when trying to run service actions via shared auth \n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -6671,16 +6665,69 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": null
+											"value": "apm_new_relic"
 										},
 										{
 											"key": "actionslug",
-											"value": null
+											"value": "execute-nrql-query"
 										}
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"id": "c0d5aa66-ee9c-4163-97f0-c7c364260004",
+									"name": "200: execute NRQL query",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"integration\": {\n        \"classId\": \"apm_new_relic\"\n    },\n    \"inputs\": {\n        \"query\": \"<NRQL query>\", // the query to execute\n        \"serviceAuth\": \"<authInstanceId>\" // id of the auth instance created during bootstrapping\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/integration-instances/:id/actions/:actionslug",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"integration-instances",
+												":id",
+												"actions",
+												":actionslug"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "apm_new_relic"
+												},
+												{
+													"key": "actionslug",
+													"value": "execute-nrql-query"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": ""
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    // response from external api\n}"
+								}
+							]
 						}
 					],
 					"id": "fb0bdd9c-8136-4809-bf91-289e5cffe8b1"
