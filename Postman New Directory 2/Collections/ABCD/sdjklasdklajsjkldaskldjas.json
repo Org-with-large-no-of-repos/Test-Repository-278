@@ -6686,7 +6686,7 @@
 							"response": [
 								{
 									"id": "c0d5aa66-ee9c-4163-97f0-c7c364260004",
-									"name": "200: execute NRQL query",
+									"name": "200: execute NRQL query before integration creation",
 									"originalRequest": {
 										"method": "POST",
 										"header": [],
