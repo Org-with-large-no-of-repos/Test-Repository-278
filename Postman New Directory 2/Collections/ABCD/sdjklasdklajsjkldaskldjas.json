@@ -6782,11 +6782,11 @@
 											"variable": [
 												{
 													"key": "serviceId",
-													"value": null
+													"value": "apm_new_relic"
 												},
 												{
 													"key": "actionId",
-													"value": null
+													"value": "execute-nrql-query"
 												}
 											]
 										}
