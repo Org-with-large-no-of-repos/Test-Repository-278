@@ -6662,6 +6662,14 @@
 										"actions",
 										":actionslug"
 									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "123",
+											"description": "optional. This is required only when using basic auth to make this request",
+											"disabled": true
+										}
+									],
 									"variable": [
 										{
 											"key": "id",
@@ -6672,7 +6680,8 @@
 											"value": "execute-nrql-query"
 										}
 									]
-								}
+								},
+								"description": "To use this endpoint with basic auth the consumers need to provide mandatory query param `user_id`"
 							},
 							"response": [
 								{
@@ -6691,7 +6700,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseUrl}}/integration-instances/:id/actions/:actionslug",
+											"raw": "{{baseUrl}}/integration-instances/:id/actions/:actionslug?user_id=123",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -6700,6 +6709,13 @@
 												":id",
 												"actions",
 												":actionslug"
+											],
+											"query": [
+												{
+													"key": "user_id",
+													"value": "123",
+													"description": "this is mandatory when using basic auth without user access token\n"
+												}
 											],
 											"variable": [
 												{
@@ -6726,6 +6742,65 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\n    // response from external api\n}"
+								},
+								{
+									"id": "0c025afb-eadf-4521-9bbf-6b1eed0dcce6",
+									"name": "200: execure NRQL query with integration instance id",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"integration\": {\n        \"instanceId\": \"<integrationInstanceId>\" // Id of the integration to run service action for\n    },\n    \"inputs\": {\n        // inputs required for a running a service action\n        \"query\": \"<NRQL query>\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/integration-instances/:id/actions/:actionslug?user_id=123",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"integration-instances",
+												":id",
+												"actions",
+												":actionslug"
+											],
+											"query": [
+												{
+													"key": "user_id",
+													"value": "123",
+													"description": "this is mandatory when using basic auth without user access token"
+												}
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "apm_new_relic"
+												},
+												{
+													"key": "actionslug",
+													"value": "execute-nrql-query"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": ""
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    // results from new relic api\n}"
 								}
 							]
 						}
