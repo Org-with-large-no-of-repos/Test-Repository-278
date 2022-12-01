@@ -6761,15 +6761,16 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseUrl}}/integration-instances/:id/actions/:actionslug?user_id=123",
+											"raw": "{{baseUrl}}/services/:serviceId/actions/:actionId/run?user_id=123",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
-												"integration-instances",
-												":id",
+												"services",
+												":serviceId",
 												"actions",
-												":actionslug"
+												":actionId",
+												"run"
 											],
 											"query": [
 												{
@@ -6780,12 +6781,12 @@
 											],
 											"variable": [
 												{
-													"key": "id",
-													"value": "apm_new_relic"
+													"key": "serviceId",
+													"value": null
 												},
 												{
-													"key": "actionslug",
-													"value": "execute-nrql-query"
+													"key": "actionId",
+													"value": null
 												}
 											]
 										}
